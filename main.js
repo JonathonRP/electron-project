@@ -8,4 +8,5 @@ app.on('ready', function(){
         height: 1080,
         frame: false
     })
+    mainWindow.webContents.openDevTools()
 })
