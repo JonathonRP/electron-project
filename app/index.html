@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript"
+            src="https://cdn.rawgit.com/brython-dev/brython/stable/www/src/brython.js"></script>
+        <script type="text/javascript"
+            src="https://cdn.rawgit.com/brython-dev/brython/stable/www/src/brython_stdlib.js"></script>
+        <link href = "css/reset.css" rel = "stylesheet">
+        <link href = "css/main.css" rel = "stylesheet">
+
+        <title id="title"> Electron Project </title>
+
+    </head>
+    <body onload="brython()">
+        <div id="container">
+            <nav>
+                <div id="titleshown">
+                </div>
+                <div id="buttons">
+                    <div id="minimize">
+                        <span>-</span>
+                    </div>
+                    <div id="maximize">
+                        <span>+</span>
+                    </div>
+                    <div id="close">
+                        <span>&times;</span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <script type="text/python" src="init.py"></script>
+        
+    </body>
+</html>
+
+

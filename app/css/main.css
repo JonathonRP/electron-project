@@ -1,0 +1,42 @@
+#container{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#container nav{
+    display: block;
+    width: 100%;
+    height: 20px;
+    background-color: #333333;
+}
+
+#container nav #titleshown{
+    width: 200px;
+    height: 100%;
+    line-height: 20px;
+    color: #f7f7f7;
+    font-size: 1.2em;
+    font-weight: bold;
+    float: left;
+    padding: 0 0 0 1em;
+}
+
+#container nav #buttons{
+    float: right;
+    width: 150px;
+    height: 100%;
+    line-height: 20px;
+    background-color: #222222;
+}
+
+#buttons #minimize, #buttons #maximize, #buttons #close{
+    float: left;
+    height: 100%;
+    width: 33%;
+    text-align: center;
+    color: #f7f7f7;
+}
