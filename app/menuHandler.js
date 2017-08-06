@@ -1,4 +1,5 @@
-const py = require('')
+var python = require('python.js')
+var document = python.import('browser').document
 const {remote} = require('electron')
 
 var win = remote.getCurrentWindow()
