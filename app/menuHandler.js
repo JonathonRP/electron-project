@@ -1,4 +1,4 @@
-var python = require('python.js')
+var python = require('python.node')
 var document = python.import('browser').document
 const {remote} = require('electron')
 
