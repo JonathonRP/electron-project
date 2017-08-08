@@ -1,10 +1,9 @@
-var python = require('python.node')
-var document = python.import('browser').document
-const {remote} = require('electron')
+var python = require('rapydscript-ng');
+const {remote} = require('electron');
 
-var win = remote.getCurrentWindow()
+var win = remote.getCurrentWindow();
 
 def min(event):
     win.minimize()
 
-document['minimize'].bind('click', min)
+document.getElementById('minimize').click(min());
