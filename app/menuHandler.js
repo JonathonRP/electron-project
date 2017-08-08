@@ -1,4 +1,4 @@
-var python = require('rapydscript-ng');
+var python = require('python.node');
 const {remote} = require('electron');
 
 var win = remote.getCurrentWindow();
