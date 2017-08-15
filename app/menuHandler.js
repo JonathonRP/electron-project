@@ -1,9 +1,9 @@
-var python = require('python.node');
-const {remote} = require('electron');
+var python = require('python.node')
+const {remote} = require('electron')
+const {browser} = python.import('browser')
 
 var win = remote.getCurrentWindow();
 
-def min(event):
+browser.document['minimize'].click( function(){
     win.minimize()
-
-document.getElementById('minimize').click(min());
+});
