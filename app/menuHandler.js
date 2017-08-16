@@ -1,10 +1,20 @@
-var python = require('python.node')
+const $ = require('jquery')
 const {remote} = require('electron')
-var brython = require('brython')
-var browser = python.import('browser')
 
 var win = remote.getCurrentWindow();
 
-browser.document['minimize'].bind( click, function(){
+function min(){
     win.minimize()
-});
+}
+
+function max(){
+    win.maximize()
+}
+
+function close(){
+    win.close()
+}
+
+$('#minimize').click(min);
+$('#maximize').click(max);
+$('#close').click(close);
