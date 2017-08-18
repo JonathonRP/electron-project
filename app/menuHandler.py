@@ -1,7 +1,4 @@
 from browser import document
-import js2py
-js2py.translate_file('electron.js','electron.py')
-from electron import remote
 
 win = remote.getCurrentWindow();
 
