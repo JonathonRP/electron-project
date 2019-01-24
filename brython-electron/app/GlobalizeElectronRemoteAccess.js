@@ -1,9 +1,10 @@
     //GlobalizeElectronRemoteAccess.js
-    const {remote} = require("electron");
+    window.Electron = require('electron');
+// const {remote} = require("electron");
 
-    Electron = {
-        remote: remote
-    }
+// Electron = {
+//     remote: remote
+// }
 //|_______________________________________________________
     //menuHandler.js
 // const $ = require('jquery')

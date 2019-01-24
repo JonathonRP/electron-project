@@ -1,0 +1,38 @@
+doctype html
+
+html
+    head
+        script(type="text/javascript" src="../node_modules/brython/brython.js")
+        script(type="text/javascript" src="../node_modules/brython/brython_stdlib.js")
+        script(type="text/javascript" src="GlobalizeElectronRemoteAccess.js")
+        link(href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet")
+        link(href = "css/main.css" rel = "stylesheet")
+
+        title#title Brython Electron
+
+    body(onload="brython()")
+        script(type="text/python" src="menuHandler.py")
+
+        div#container
+            nav
+                h1#titleshown
+                
+                div#buttons
+                    div#minimize
+                        span -
+                    div#maximize
+                        span +
+                    div#close
+                        //<span>&times;</span>
+                        span x
+
+            main.container.pt-2.mx-auto
+                div.jumbotron
+                    h1#welcome.display-1.text-center welcome
+
+                div.row.mx-auto
+                    div.col-sm-12
+                        button#speak.btn.btn-primary python has something to say!
+                        button#reset.btn.btn-secondary reset
+
+        script(type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js")
