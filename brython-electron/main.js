@@ -1,5 +1,4 @@
 const {app, BrowserWindow, protocol} = require('electron')
-const protocols = require('electron-protocols')
 const fs = require('fs')
 const path = require('path')
 const pug = require('pug')
@@ -77,6 +76,12 @@ function createWindow() {
     win = new BrowserWindow({
         width: 1920,
         height: 1080,
+        webPreferences: {
+            nodeIntegration: true,
+            // preload: "preload-index.js",
+            contextIsolation: false,
+            webSecurity: true
+        },
         frame: false
     })
 

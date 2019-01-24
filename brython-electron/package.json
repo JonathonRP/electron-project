@@ -1,7 +1,8 @@
 {
-  "name": "electron-projects",
+  "name": "brython-electron",
   "version": "1.0.0",
-  "description": "",
+  "description": "Electron website as Application using Python instead of JavaScript",
+  "repository": "https://github.com/JonathonRP/electron-project/",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
@@ -11,10 +12,7 @@
   "devDependencies": {
     "bindings": "^1.3.0",
     "brython": "^3.7.0",
-    "electron": "^1.6.11",
-    "electron-prebuilt-compile": "^1.6.11",
-    "electron-protocols": "^1.0.4",
-    "electron-rebuild": "^1.6.0",
+    "electron": "^4.0.2",
     "jquery": "^3.2.1",
     "node-gyp": "^3.6.2",
     "popper.js": "^1.14.6",
