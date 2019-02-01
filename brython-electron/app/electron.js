@@ -1,10 +1,14 @@
-// import { webFrame } from "electron";
+const { webFrame, remote } = require('electron');
 
-//     //renderer.js
-// webFrame.executeJavaScript("window.Electron = require('electron')")
-    
+window.Electron = {
+    remote : remote
+}
+
+webFrame.registerURLSchemeAsPrivileged('app', { bypassCSP: true, corsEnabled: true })
+
     //GlobalizeElectronRemoteAccess.js
-window.Electron = require('electron');
+// window.Electron = require('electron');
+
 // const {remote} = require("electron");
 
 // Electron = {

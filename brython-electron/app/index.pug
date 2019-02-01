@@ -2,17 +2,18 @@ doctype html
 
 html
     head
-        meta(http-equiv="Content-Security-Policy", content="script-src 'self' 'unsafe-inline' 'unsafe-eval'")
-        script(type="text/javascript" src="../node_modules/brython/brython.js")
-        script(type="text/javascript" src="../node_modules/brython/brython_stdlib.js")
-        script(type="text/javascript" src="../preload-index.js")
-        link(href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet")
-        link(href = "css/main.css" rel = "stylesheet")
+        //- meta(http-equiv="Content-Security-Policy", content="script-src 'self' app: 'unsafe-inline' 'unsafe-eval' ")
+        script(type="text/javascript" src="app://node_modules/brython/brython.js")
+        script(type="text/javascript" src="app://node_modules/brython/brython_stdlib.js")
+        script(type="text/javascript" src="app://node_modules/bootstrap/dist/js/bootstrap.bundle.js")
+        link(href="app://node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet")
+        link(href = "app://css/main.css" rel = "stylesheet")
 
         title#title Brython Electron
 
     body(onload="brython()")
-        script(type="text/python" src="menuHandler.py")
+        script(type="text/python" src="app://py/menuHandler.py")
+        script(type="text/python" src="app://py/documentHandler.py")
 
         div#container
             nav
@@ -35,5 +36,3 @@ html
                     div.col-sm-12
                         button#speak.btn.btn-primary python has something to say!
                         button#reset.btn.btn-secondary reset
-
-        script(type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js")
