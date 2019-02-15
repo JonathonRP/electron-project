@@ -31,8 +31,30 @@ html
             main#main.container.pt-5.mx-auto
                 section.todoapp
                     header.header
-                    h1 Todos
-                    input(class="new-todo" placeholder="What needs to be done?" autofocus="" onkeypress="addItem(event)")
+                        h1 todos
+                        input.new-todo(placeholder="What needs to be done?" autofocus="" onkeypress="addItem(event)")
+                    
+                    //- This section should be hidden by default and shown when there are todos
                     section.main
+                        input#toggle-all.toggle-all(type="checkbox")
+                        label(for="toggle-all") Mark all as complete
                         ul.todo-list
+                    
+                    //- This footer should hidden by default and shown when there are todos
                     footer.footer
+                        //- This should be `0 items left` by default
+                        span.todo-count #[strong 0] item left
+                        ul.filters
+                            li
+                                a.selected(href="#/") All
+                            li
+                                a(href="#/active") Active
+                            li
+                                a(href="#/completed") Completed
+                        button.clear-completed Clear completed
+                footer.info
+                    p Double-click to edit a todo
+                    p Written by 
+                        a(href="https://github.com/JonathonRP" target="_blank") Reese Perry
+                    p Part of 
+                        a(href="http://todomvc.com" target="_blank") TodoMVC
