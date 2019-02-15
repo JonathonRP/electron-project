@@ -1,0 +1,9 @@
+// Hack to remove background from Mobile Safari.
+// Can't use it globally since it destroys checkboxes in Firefox
+=removeBackground-safariMobile
+    @media screen and (-webkit-min-device-pixel-ratio:0)
+        @content
+
+=xs
+    @media (max-width: 430px)
+        @content

@@ -9,7 +9,7 @@ html
         link(href="app://node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet")
         link(href = "app://css/main.css" rel = "stylesheet")
 
-        title#title Brython Electron
+        title#title Electron - Python GUI
 
     body(onload="brython()")
         script(type="text/python" src="app://py/menuHandler.py")
@@ -25,14 +25,14 @@ html
                     div#maximize
                         span +
                     div#close
-                        //- <span>&times;</span>
+                        //- span &times;
                         span x
 
-            main.container.pt-2.mx-auto
-                div.jumbotron
-                    h1#welcome.display-1.text-center welcome
-
-                div.row.mx-auto
-                    div.col-sm-12
-                        button#speak.btn.btn-primary python has something to say!
-                        button#reset.btn.btn-secondary reset
+            main#main.container.pt-5.mx-auto
+                section.todoapp
+                    header.header
+                    h1 Todos
+                    input(class="new-todo" placeholder="What needs to be done?" autofocus="" onkeypress="addItem(event)")
+                    section.main
+                        ul.todo-list
+                    footer.footer
