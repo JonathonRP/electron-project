@@ -98,10 +98,6 @@ function setupProtocols(options = {}){
   })
 }
 
-python_bin = "env/Scripts/python"
-
-spawn(python_bin, ["app/todo-mvc/app.py"])
-
 function createWindow() {
 
     setupProtocols({pretty: true})
@@ -127,17 +123,22 @@ function createWindow() {
     //     slashes: true
     // }))
 
-    win.loadURL('http://localhost:5000')
+    http.get('http://localhost:5000', function (res) {
+      win.loadURL('http://localhost:5000')
+    }).on('error', function(e) {
+
+      console.log(e.message)
+
+      if(e.message == "connect ECONNREFUSED 127.0.0.1:5000") {
+        python_bin = "env/Scripts/python"
+        spawn(python_bin, ["app/todo-mvc/app.py"])
+      }
+    })
 
     // win.webContents.openDevTools()
 
     win.once('ready-to-show', () => {
       win.show()
-    })
-
-    win.on('close', () => {
-      
-      win.loadURL('http://localhost:5000/shutdown')
     })
 }
 

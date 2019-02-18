@@ -51,13 +51,13 @@ def updateTodo(item_id):
     # pusher.trigger('todo', 'item-updated', data)
     return jsonify(data)
 
-@app.route('/shutdown', methods=['GET', 'POST'])
+@app.route('/shutdown', method='POST')
 def shutdown():
     func = request.environ.get('werkzeug.server.shutdown')
     if func is None:
         raise RuntimeError('Not running with the Werkzeug Server')
     func()
-    return 'Server shutting down...'
+    return 'Server shutting down...', 505
 
 # run Flask app in debug mode
 app.run(debug=True)
