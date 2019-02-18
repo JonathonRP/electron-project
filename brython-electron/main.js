@@ -1,4 +1,6 @@
-const {app, BrowserWindow, protocol, webFrame} = require('electron')
+const {app, BrowserWindow, protocol} = require('electron')
+const spawn = require('child_process').spawn
+const http = require('http')
 const fs = require('fs')
 const path = require('path')
 const pug = require('pug')
@@ -96,29 +98,47 @@ function setupProtocols(options = {}){
   })
 }
 
+python_bin = "env/Scripts/python"
+
+spawn(python_bin, ["app/todo-mvc/app.py"])
+
 function createWindow() {
 
     setupProtocols({pretty: true})
 
     win = new BrowserWindow({
-        width: 1920,
-        height: 1080,
+        width: 1000,
+        height: 800,
+        minWidth: 500,
+        minHeight: 666,
         webPreferences: {
             nodeIntegration: false,
             contextIsolation: false,
             preload: path.join(__dirname, app_dir, 'electron.js'),
             webSecurity: true
         },
-        frame: false
+        frame: false,
+        show: false
     })
 
-    win.loadURL(Url.format({
-        pathname: path.join(__dirname, app_dir, 'index.pug'),
-        protocol: 'pug:',
-        slashes: true
-    }))
+    // win.loadURL(Url.format({
+    //     pathname: path.join(__dirname, app_dir, 'index.pug'),
+    //     protocol: 'pug:',
+    //     slashes: true
+    // }))
 
-    win.webContents.openDevTools()
+    win.loadURL('http://localhost:5000')
+
+    // win.webContents.openDevTools()
+
+    win.once('ready-to-show', () => {
+      win.show()
+    })
+
+    win.on('close', () => {
+      
+      win.loadURL('http://localhost:5000/shutdown')
+    })
 }
 
 protocol.registerStandardSchemes(['pug','app'])
@@ -127,6 +147,38 @@ app.on('ready', createWindow)
 
 app.on('window-all-closed', () => {
     if(process.platform !== 'darwin'){
-        app.quit();
+
+      const data = JSON.stringify({
+        todo: 'Shutdown Server'
+      })
+      
+      const options = {
+        hostname: 'localhost',
+        port: 5000,
+        path: '/shutdown',
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Content-Length': data.length
+        }
+      }
+      
+      const req = http.request(options, (res) => {
+        console.log(`statusCode: ${res.statusCode}`)
+        console.log(res.statusMessage)
+
+        res.on('data', (d) => {
+          process.stdout.write(d)
+        })
+      })
+      
+      req.on('error', (error) => {
+        console.error(error)
+      })
+      
+      req.write(data)
+      req.end()
+
+      app.quit()
     }
 })
