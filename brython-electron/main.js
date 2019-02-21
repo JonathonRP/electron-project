@@ -1,108 +1,16 @@
-const {app, BrowserWindow, protocol} = require('electron')
-const spawn = require('child_process').spawn
-const http = require('http')
-const fs = require('fs')
+const {app, BrowserWindow} = require('electron')
 const path = require('path')
-const pug = require('pug')
-const Url = require('url')
-const mime = require('mime')
-const EventEmitter = require('events')
+const {ProtocolStatus, protocols} = require('./InternalProtocols')
+const {ServerStatus, flask} = require('./Server')
 
-const HTML_MIME = mime.getType('html')
+let app_dir = '/app/'
 
-class PugEmitter extends EventEmitter {}
+async function createWindow() {
 
-let win
+   ProtocolStatus.on('error', err => console.error('protocols failed', err))
+   await protocols("setup", {pretty: true})
 
-var img_dir = '/img/'
-var app_dir = '/app/'
-
-const getPath = url => {
-    let parsed = Url.parse(url)
-    let host = decodeURIComponent(parsed.hostname)
-    let result = decodeURIComponent(parsed.pathname)
-  
-    // Local files in windows start with slash if no host is given
-    // file:///c:/something.pug
-    if (process.platform === 'win32' && !parsed.host.trim()) {
-      result = result.substr(1)
-    }
-  
-    return {
-      host: host, 
-      path: result,
-      file: (host === 'd') ? result: host + result
-    }
-}
-
-function setupProtocols(options = {}){
-  new Promise((resolve, reject) => {
-    let emitter = new PugEmitter()
-
-    protocol.registerBufferProtocol('pug', (request, result) => {
-      let file = getPath(request.url).file
-  
-      // See if file actually exists
-      try {
-        let content = fs.readFileSync(file)
-        let ext = path.extname(file)
-        let data = {data: content, mimeType: mime.getType(ext)}
-
-        if (ext === '.pug') {
-          let compiled = pug.renderFile(file, options)
-          data = {data: Buffer.from(compiled), mimeType: HTML_MIME}
-        }
-        
-        return result(data)
-      } catch (err) {
-        // See here for error numbers:
-        // https://code.google.com/p/chromium/codesearch#chromium/src/net/base/net_error_list.h
-        let errorData
-        if (err.code === 'ENOENT') {
-          errorData = -6
-        } else if (typeof err.code === 'number') {
-          errorData = -2
-        } else {
-          // Remaining errors are considered to be pug errors
-          // All errors wrt. Pug are rendered in browser
-          errorData = {data: Buffer.from(`<pre style="tab-size:1">${err}</pre>`), mimeType: HTML_MIME}
-        }
-
-        emitter.emit('error', err)
-        return result(errorData)
-      }
-    },
-    err => err ? reject(err) : resolve(emitter))
-
-    protocol.registerFileProtocol('app', (request, callback) => {
-      let host = getPath(request.url).host
-      let Path = getPath(request.url).path
-      let file = getPath(request.url).file
-
-      if (host == 'node_modules') {
-        Path = path.join(__dirname, '/', file)
-        callback({ path: Path})
-      } else {
-        Path = path.join(__dirname, app_dir, file)
-        callback({ path: Path})
-      }
-    }, (err) => {
-      if (err) console.error('Failed to register app file protocol')
-    })
-    protocol.registerFileProtocol('img', (request, callback) => {
-      let file = getPath(request.url).file //test later
-      callback({ path: path.join(__dirname, img_dir, file)})
-    }, (err) => {
-      if (err) console.error('Failed to register app file protocol')
-    })
-  })
-}
-
-function createWindow() {
-
-    setupProtocols({pretty: true})
-
-    win = new BrowserWindow({
+    let win = new BrowserWindow({
         width: 1000,
         height: 800,
         minWidth: 500,
@@ -123,63 +31,51 @@ function createWindow() {
     //     slashes: true
     // }))
 
-    http.get('http://localhost:5000', function (res) {
-      win.loadURL('http://localhost:5000')
-    }).on('error', function(e) {
+    ServerStatus.on("server needs to be started", async () => {
 
-      console.log(e.message)
+      console.log('server is starting...')
+      await flask("start")
+    })
 
-      if(e.message == "connect ECONNREFUSED 127.0.0.1:5000") {
-        python_bin = "env/Scripts/python"
-        spawn(python_bin, ["app/todo-mvc/app.py"])
+    ServerStatus.on("running", () => {
+
+      setTimeout(async () => {
+        console.log('page is refreshing...')
+        await flask("refresh page")
+      }, 4200)
+    })
+
+    ServerStatus.once("page is loaded", (url) => {
+
+      win.loadURL(url)
+      win.webContents.openDevTools()
+      win.once('ready-to-show', () => {
+        win.show()
+      })
+    })
+
+    ServerStatus.on("kill", (status_code, body) => {
+      if (status_code == 505) {
+        console.log(`${body}`)
       }
     })
 
-    // win.webContents.openDevTools()
-
-    win.once('ready-to-show', () => {
-      win.show()
+    ServerStatus.on("killed", () => {
+      app.quit()
+      console.log('app is quiting...')
     })
+
+    await flask("is server running?")
 }
 
-protocol.registerStandardSchemes(['pug','app'])
+protocols("register")
 
 app.on('ready', createWindow)
 
-app.on('window-all-closed', () => {
+app.on('window-all-closed', async () => {
     if(process.platform !== 'darwin'){
 
-      const data = JSON.stringify({
-        todo: 'Shutdown Server'
-      })
-      
-      const options = {
-        hostname: 'localhost',
-        port: 5000,
-        path: '/shutdown',
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Content-Length': data.length
-        }
-      }
-      
-      const req = http.request(options, (res) => {
-        console.log(`statusCode: ${res.statusCode}`)
-        console.log(res.statusMessage)
-
-        res.on('data', (d) => {
-          process.stdout.write(d)
-        })
-      })
-      
-      req.on('error', (error) => {
-        console.error(error)
-      })
-      
-      req.write(data)
-      req.end()
-
-      app.quit()
+      console.log('app is closing...')
+      await flask("kill")
     }
 })

@@ -30,8 +30,8 @@ html
                         span x
 
             main#main.container.d-flex
-                div.row.align-self-center.w-100.mx-auto
-                    div.col-sm-12
+                div.row.align-self-center.w-100
+                    div.col-12.mx-auto
                         section.todoapp
                             header.header
                                 h1 todos
@@ -60,11 +60,11 @@ html
                                     span.todo-count #[strong 0] item left
                                     ul.filters
                                         li
-                                            a.selected(href="#/") All
+                                            a(class={selected: select == null} href="/") All
                                         li
-                                            a(href="#/active") Active
+                                            a(class={selected: select == "active"} href="/active") Active
                                         li
-                                            a(href="#/completed") Completed
+                                            a(class={selected: select == "complete"} href="/completed") Completed
                                     if completed
                                         button#clear-completed.clear-completed Clear completed
                         footer.info

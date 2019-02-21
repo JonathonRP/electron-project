@@ -22,10 +22,29 @@ tasks = [
     }
 ]
 
-# index route, shows index.html view
+tasks2 = [
+    {
+        "title": "Mow the lawn",
+        "complete": False
+    },{
+        "title": "Clean",
+        "complete": True
+    },{
+        "title": "Pet a Unicorn",
+        "complete": False
+    }
+]
+
+# index route, shows index.pug view
 @app.route('/')
 def index():
-    return render_template('index.pug', pretty=True, tasks=tasks)
+    selection = None
+    return render_template('index.pug', pretty=True, tasks=tasks, select=selection)
+# active route, shows index.pug filter to active todos view
+@app.route('/active')
+def active():
+    selection = "active"
+    return render_template('index.pug', pretty=True, tasks=tasks2, select=selection)
 
 # endpoint for storing todo item
 @app.route('/add-todo', methods = ['POST'])
@@ -51,13 +70,13 @@ def updateTodo(item_id):
     # pusher.trigger('todo', 'item-updated', data)
     return jsonify(data)
 
-@app.route('/shutdown', method='POST')
+@app.route('/shutdown', methods=['POST'])
 def shutdown():
     func = request.environ.get('werkzeug.server.shutdown')
     if func is None:
         raise RuntimeError('Not running with the Werkzeug Server')
     func()
-    return 'Server shutting down...', 505
+    return 'Server is shutting down...', 505
 
 # run Flask app in debug mode
 app.run(debug=True)
