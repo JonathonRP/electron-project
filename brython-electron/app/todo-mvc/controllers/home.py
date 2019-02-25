@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, request
-from todo_mvc.models.Todo import Todo
+from models.Todo import Todo
 
 home = Blueprint('home', __name__)
 

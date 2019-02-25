@@ -1,4 +1,4 @@
-from todo_mvc.utils import db
+from utils import db
 
 
 # model Todo

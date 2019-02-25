@@ -1,8 +1,9 @@
 from flask import Flask
-from todo_mvc import settings
-from todo_mvc.utils import db
-from todo_mvc.controllers.home import home
-from todo_mvc.APIs.todos import todos
+import settings
+from utils import db
+from controllers.home import home
+from APIs.todos import todos
+
 
 # create flask app
 app = Flask(__name__)

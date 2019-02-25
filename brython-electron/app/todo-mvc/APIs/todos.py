@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
-from todo_mvc.utils import db
-from todo_mvc.models.Todo import Todo
+from utils import db
+from models.Todo import Todo
 
 # api todos
 
