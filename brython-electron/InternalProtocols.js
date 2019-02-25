@@ -47,7 +47,7 @@ const Protocols = (status, options = {}) => (
       let todo_dir = 'todo-mvc/'
 
       protocol.registerBufferProtocol('pug', (request, result) => {
-        let file = getPath(request.url).file
+        let file = getPath(request.url).host + ':' + getPath(request.url).path
     
         // See if file actually exists
         try {

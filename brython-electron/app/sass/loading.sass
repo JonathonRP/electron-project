@@ -1,0 +1,120 @@
+*
+  margin: 0
+  height: 0
+
+$electron-spinner: #75D8F4
+$python-spinner: radial-gradient(circle, #FBE043 15%, #367FC6 45%, $electron-spinner 65%)
+$center: translate(-50%, -50%)
+
+.center
+   position: absolute
+   width: 30px
+   height: 30px
+   background: $python-spinner
+   border-radius: 50%
+   top: 50%
+   left: 50%
+   transform: $center
+
+.outer-spin, .inner-spin
+  position: absolute
+  top: 50%
+  left: 50%
+
+.outer-spin
+  animation: spin 4s linear infinite
+
+.outer-arc, .inner-arc
+  position: absolute
+  border-radius: 50%
+  border: 4px solid
+
+.outer-arc
+  width: 100px
+  height: 100px
+
+.outer-arc_start-a
+  border-color: transparent transparent transparent $electron-spinner
+  /*NOTE: the order here very much matters!  */
+  transform: $center rotate(65deg)
+
+.outer-arc_end-a
+  border-color: $electron-spinner transparent transparent transparent
+  transform: $center rotate(45deg)
+
+.outer-arc_start-b
+  border-color: transparent transparent transparent $electron-spinner
+  transform: $center rotate(65deg) scale(-1, -1)
+
+.outer-arc_end-b
+  border-color: $electron-spinner transparent transparent transparent
+  transform: $center rotate(45deg) scale(-1, -1)
+
+
+.outer-moon-a
+   position: absolute
+   top: 50%
+   left: 50%
+   width: 15px
+   height: 15px
+   background: $python-spinner
+   border-radius: 50%
+   transform: $center translate(52px, 0)
+
+.outer-moon-b
+   position: absolute
+   top: 50%
+   left: 50%
+   width: 15px
+   height: 15px
+   background: $python-spinner
+   border-radius: 50%
+   transform: $center translate(-52px, 0)
+
+.inner-spin
+  animation: spin 3s linear infinite
+
+.inner-arc
+  width: 62px
+  height: 62px
+
+.inner-arc_start-a
+  border-color: transparent transparent transparent $electron-spinner
+  /*NOTE: the order here very much matters!  */
+  transform: $center rotate(65deg)
+
+.inner-arc_end-a
+  border-color: $electron-spinner transparent transparent transparent
+  transform: $center rotate(45deg)
+
+.inner-arc_start-b
+  border-color: transparent transparent transparent $electron-spinner
+  transform: $center rotate(65deg) scale(-1, -1)
+
+.inner-arc_end-b
+  border-color: $electron-spinner transparent transparent transparent
+  transform: $center rotate(45deg) scale(-1, -1)
+
+.inner-moon-a
+   position: absolute
+   top: 50%
+   left: 50%
+   width: 12px
+   height: 12px
+   background: $python-spinner
+   border-radius: 50%
+   transform: $center translate(33px, 0)
+
+.inner-moon-b
+   position: absolute
+   top: 50%
+   left: 50%
+   width: 12px
+   height: 12px
+   background: $python-spinner
+   border-radius: 50%
+   transform: $center translate(-33px, 0)
+
+@keyframes spin
+    100%
+        transform: rotate(360deg)

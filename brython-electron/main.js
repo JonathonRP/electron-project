@@ -1,5 +1,6 @@
 const {app, BrowserWindow} = require('electron')
 const path = require('path')
+const Url = require('url')
 const Protocols = require('./InternalProtocols')
 const Flask = require('./Server')
 
@@ -9,6 +10,14 @@ let flask = new Flask()
 async function createWindow() {
 
     await Protocols("setup", {pretty: true}).catch(err => console.error('protocols failed', err))
+
+    let loading_win = new BrowserWindow({
+      frame: false,
+      transparent: true,
+      alwaysOnTop: true
+    })
+
+    loading_win.loadURL(Url.format({protocol: 'pug', slashes: true, pathname: path.join(__dirname, app_dir, 'loading.pug')}))
 
     let win = new BrowserWindow({
         width: 1000,
@@ -46,9 +55,14 @@ async function createWindow() {
     flask.on("load", (url) => {
 
       win.loadURL(url)
-      win.webContents.openDevTools()
+      // win.webContents.openDevTools()
+
       win.once('ready-to-show', () => {
         win.show()
+
+        win.webContents.on('dom-ready', () => {
+          loading_win.close()
+        })
       })
     })
 
@@ -65,8 +79,13 @@ async function createWindow() {
       console.log('app is quiting...')
       app.quit()
     })
-  
-    flask.Server("are you running?")
+
+    loading_win.once('show', () => {
+      flask.Server("are you running?")
+    })
+    
+    loading_win.maximize()
+    loading_win.show()
 }
 
 Protocols("register")
