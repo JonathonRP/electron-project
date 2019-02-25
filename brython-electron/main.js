@@ -1,14 +1,14 @@
 const {app, BrowserWindow} = require('electron')
 const path = require('path')
-const {ProtocolStatus, protocols} = require('./InternalProtocols')
-const {ServerStatus, flask} = require('./Server')
+const Protocols = require('./InternalProtocols')
+const Flask = require('./Server')
 
 let app_dir = '/app/'
+let flask = new Flask()
 
 async function createWindow() {
 
-   ProtocolStatus.on('error', err => console.error('protocols failed', err))
-   await protocols("setup", {pretty: true})
+    await Protocols("setup", {pretty: true}).catch(err => console.error('protocols failed', err))
 
     let win = new BrowserWindow({
         width: 1000,
@@ -31,21 +31,19 @@ async function createWindow() {
     //     slashes: true
     // }))
 
-    ServerStatus.on("server needs to be started", async () => {
+    flask.on("server needs to be started", async () => {
 
       console.log('server is starting...')
-      await flask("start")
+      await flask.Start()
     })
 
-    ServerStatus.on("running", () => {
+    flask.on("running", async (status) => {
 
-      setTimeout(async () => {
-        console.log('page is refreshing...')
-        await flask("refresh page")
-      }, 4200)
+      console.log('loading...')
+      await flask.Server("running")
     })
 
-    ServerStatus.once("page is loaded", (url) => {
+    flask.on("load", (url) => {
 
       win.loadURL(url)
       win.webContents.openDevTools()
@@ -54,28 +52,31 @@ async function createWindow() {
       })
     })
 
-    ServerStatus.on("kill", (status_code, body) => {
+    flask.on("kill", (status_code, body) => {
+
+      console.log('app is closing...')
+
       if (status_code == 505) {
         console.log(`${body}`)
       }
     })
 
-    ServerStatus.on("killed", () => {
-      app.quit()
+    flask.on("killed", () => {
       console.log('app is quiting...')
+      app.quit()
     })
-
-    await flask("is server running?")
+  
+    flask.Server("are you running?")
 }
 
-protocols("register")
+Protocols("register")
 
 app.on('ready', createWindow)
 
 app.on('window-all-closed', async () => {
-    if(process.platform !== 'darwin'){
 
-      console.log('app is closing...')
-      await flask("kill")
-    }
+  if(process.platform !== 'darwin'){
+
+    await flask.Kill()
+  }
 })

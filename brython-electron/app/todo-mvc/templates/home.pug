@@ -1,0 +1,94 @@
+doctype html
+
+html
+    head
+        //- meta(http-equiv="Content-Security-Policy", content="script-src 'self' app: 'unsafe-inline' 'unsafe-eval' ")
+        link(href="app://node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet")
+        link(href="app://css/main.css" rel="stylesheet")
+        link(href="todo-mvc://static/css/todo-mvc.css" rel="stylesheet")
+        
+        title#title Python • TodoMVC
+
+    body(onload="brython()")
+        div#container
+            nav
+                h1#titleshown
+    
+                div#buttons
+                    div#minimize
+                        span -
+                    div#maximize
+                        span +
+                    div#close
+                        //- span &times;
+                        span x
+
+            main#main.container.d-flex
+                div.row.align-self-center.w-100
+                    div.col-12.mx-auto
+                        section.todoapp
+                            header.header
+                                h1 todos
+                                input.new-todo(placeholder="What needs to be done?" autofocus)
+                            
+                            section.main
+                                input#toggle-all.toggle-all(type="checkbox")
+                                label(for="toggle-all") Mark all as complete
+                                ul.todo-list
+                                
+                            footer.footer
+                                
+                        footer.info
+                            p Double-click to edit a todo
+                            p Written by 
+                            |
+                            button#creator Reese Perry
+                            p Part of 
+                            |
+                            button#TodoMVC TodoMVC
+            
+        script(type="text/template." id="item-template")
+            div.view
+                input(class="toggle" type="checkbox" checked=completed)
+                label=title
+                button.destroy
+            input.edit(value=title)
+
+        script(type="text/template." id="stats-template")
+            //- This should be `0 items left` by default
+            span.todo-count #[strong 0] remaining == 1 ? 'item' : 'items' left
+            ul.filters
+                li
+                    a.selected(href="/#") All
+                li
+                    a(href="#/active") Active
+                li
+                    a(href="#/completed") Completed
+
+            if completed == 'true'
+                button#clear-completed.clear-completed Clear completed
+
+        
+        script(type="text/javascript" src="app://node_modules/brython/brython.js")
+        script(type="text/javascript" src="app://node_modules/brython/brython_stdlib.js")
+        script(type="text/javascript" src="app://node_modules/bootstrap/dist/js/bootstrap.bundle.js")
+
+        script(type="text/javascript" src="app://node_modules/jquery/dist/jquery.js")
+        script(type="text/javascript" src="app://node_modules/underscore/underscore.js")
+        script(type="text/javascript" src="app://node_modules/backbone/backbone.js")
+
+        script(type="text/javascript" src="todo-mvc://static/js/models/todo.js")
+        script(type="text/javascript" src="todo-mvc://static/js/models/todo.js")
+        script(type="text/javascript" src="todo-mvc://static/js/views/todo-view.js")
+        script(type="text/javascript" src="todo-mvc://static/js/views/app-view.js")
+        script(type="text/javascript" src="todo-mvc://static/js/routers/router.js")
+        script(type="text/javascript" src="todo-mvc://static/js/app.js")
+
+        script(type="text/python" src="app://py/menuHandler.py")
+        //- script(type="text/python" src="todo-mvc://static/py/documentHandler.py")
+
+        script.
+            $(function(){
+                app.todos.url = '{{ url_for("todos.create") }}';
+                app.todos.reset({{ todos | tojson }});
+            });

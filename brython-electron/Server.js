@@ -2,88 +2,96 @@ const {spawn} = require('child_process')
 const request = require('request')
 const {EventEmitter} = require('events')
 
-class StatusEmitter extends EventEmitter {}
-let ServerStatus = new StatusEmitter()
-
 var Status = {
-    CheckServerIsRunning: "is server running?",
+    CheckIfServerIsRunning: "are you running?",
     Error: 'error',
-    PageLoaded: "page is loaded",
+    Load: "load",
     ServerNeedsToBeStarted: "server needs to be started",
     Start: "start",
     Running: "running",
-    RefreshPage: "refresh page",
+    Reload: "reload",
     Kill: "kill",
     Killed: "killed"
 }
 var Start = Status.Start
+var Running = Status.Running
 var Kill = Status.Kill
 var base_url = 'http://localhost:5000'
+let server
 
-const flask = (status) => (
-  new Promise((resolve, reject) => {
-    
+class Flask extends EventEmitter {
+
+  constructor() {
+    super()
+  }
+
+  Server(status) {
+    var self = this
     if (status == Start) {
-      try {
+      self.Start()
+    } else if (status == Kill) {
+      self.Kill()
+    } else if (status == Status.CheckIfServerIsRunning || status == Running) {
+      request.get(base_url, function (resp) {
 
-        python_bin = "env/Scripts/python"
-        var server = spawn(python_bin, ["app/todo-mvc/app.py"])
-        
-        server.stdout.on('data', (data) => {
-          console.log(data.toString())
-        })
-        
-        ServerStatus.emit(Status.Running)
-      } catch (err) {
-
-        ServerStatus.emit(Status.Error, err)
-        return console.log(err)
-      }
-    }
-    else if (status == Kill) {
-
-      request.post(`${base_url}/shutdown`,{
-        todo: 'Shutdown Server'
-      }, (error, resp, body) => {
-
-        let status_code = resp.statusCode
-        ServerStatus.emit(Status.Kill, status_code, body)
-
-        if (error) {
-          console.error(error)
-          ServerStatus.emit(Status.Error, error)
-          return
-        }
-
-        ServerStatus.emit(Status.Killed)
-      })
-    } else {
-
-      request.get(base_url, function (res) {
-        
-        ServerStatus.emit(Status.PageLoaded, base_url)
+        self.emit(Status.Load, base_url)
       }).on('error', async function(e) {
-
+  
         console.error(e.message)
-
+  
         if (e.message == "connect ECONNREFUSED 127.0.0.1:5000") {
-          if(status == Status.CheckServerIsRunning) {
-            ServerStatus.emit(Status.ServerNeedsToBeStarted)
-          }
-          else if (status == Status.RefreshPage) {
-            ServerStatus.emit(Status.Running)
+          if(status == Status.CheckIfServerIsRunning) {
+            self.emit(Status.ServerNeedsToBeStarted)
           } else {
-            ServerStatus.emit(Kill)
+            self.emit(Kill)
           }
         } else {
-          ServerStatus.emit(Kill)
+          self.emit(Kill)
         }
       })
     }
-  })
-)
+  }
 
-module.exports = {
-    ServerStatus,
-    flask
+  async Start() {
+    try {
+      var python_bin = "env/Scripts/python"
+      server = await spawn(python_bin, ["-u", "app/todo-mvc/app.py"])
+
+      server.stdout.on('data', (data) => {
+        console.log(data.toString())
+      })
+
+      server.stderr.on('data', (data) => {
+        console.log(data.toString())
+
+        if (data.toString().includes("Running")) {
+          this.emit(Status.Running)
+        }
+      })
+    } catch (err) {
+      this.emit(Status.Error, err)
+      return console.log(err)
+    }
+  }
+
+  Kill() {
+
+    request.post(`${base_url}/shutdown`,{
+      todo: 'Shutdown Server'
+    }, (error, resp, body) => {
+
+      let status_code = resp.statusCode
+      this.emit(Status.Kill, status_code, body)
+
+      if (error) {
+        console.error(error)
+        this.emit(Status.Error, error)
+        return
+      }
+
+      this.emit(Status.Killed)
+    })
+  }
 }
+
+module.exports = Flask

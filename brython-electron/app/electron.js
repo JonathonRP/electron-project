@@ -1,10 +1,16 @@
 const { webFrame, remote } = require('electron');
+const isElectron = require('is-electron')
 
 window.Electron = {
     remote : remote
 }
 
+window.isElectron = {
+    isElectron: isElectron()
+}
+
 webFrame.registerURLSchemeAsPrivileged('app', { bypassCSP: true, corsEnabled: true })
+webFrame.registerURLSchemeAsPrivileged('todo-mvc', { bypassCSP: true, corsEnabled: true })
 
     //GlobalizeElectronRemoteAccess.js
 // window.Electron = require('electron');

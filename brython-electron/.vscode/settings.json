@@ -1,6 +1,9 @@
 {
-    "python.pythonPath": "C:\\Users\\jrees\\AppData\\Local\\Programs\\Python\\Python37-32\\python.exe",
+    "python.pythonPath": "env\\Scripts\\python.exe",
     "typescript.suggest.completeFunctionCalls": true,
     "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
-    "tslint.jsEnable": true
+    "tslint.jsEnable": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true
 }

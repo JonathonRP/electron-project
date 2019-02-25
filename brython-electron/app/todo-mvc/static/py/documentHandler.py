@@ -2,8 +2,6 @@ from browser import document, window, alert
 
 def addItem(event):
     if event.keyCode == 13:
-        document["app-main"].classList.remove("hidden")
-        document["footer"].classList.remove("hidden")
         document.select(".new-todo")[0].value = ""
 
 def toggle_all(event):
@@ -20,6 +18,6 @@ def TodoMVC(event):
 
 document.select(".new-todo")[0].bind('keypress', addItem)
 document["toggle-all"].bind('click', toggle_all)
-# document["clear-completed"].bind('click', clear_completed)
+document["clear-completed"].bind('click', clear_completed)
 document["creator"].bind('click', creator)
 document["TodoMVC"].bind('click', TodoMVC)

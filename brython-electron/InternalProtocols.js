@@ -34,16 +34,17 @@ const getPath = url => {
     }
 }
 
-const protocols = (status, options = {}) => (
+const Protocols = (status, options = {}) => (
   new Promise((resolve, reject) => {
 
     if (status == Status.Register) {
 
-      protocol.registerStandardSchemes(['pug','app'])
+      protocol.registerStandardSchemes(['pug','app','todo-mvc'])
     } else if (status == Status.Setup) {
     
       let img_dir = '/img/'
       let app_dir = '/app/'
+      let todo_dir = 'todo-mvc/'
 
       protocol.registerBufferProtocol('pug', (request, result) => {
         let file = getPath(request.url).file
@@ -98,6 +99,17 @@ const protocols = (status, options = {}) => (
         }
       }, err => err ? reject(err): resolve(err))
 
+      protocol.registerFileProtocol('todo-mvc', (request, callback) => {
+        let file = getPath(request.url).file
+
+        try {
+            callback({ path: path.join(__dirname, app_dir, todo_dir, file)})
+        } catch (err) {
+          ProtocolStatus.emit('error', err)
+          return callback({data: err})
+        }
+      }, err => err ? reject(err): resolve(err))
+
       protocol.registerFileProtocol('img', (request, callback) => {
         let file = getPath(request.url).file //test later
         try {
@@ -111,7 +123,4 @@ const protocols = (status, options = {}) => (
   })
 )
 
-module.exports = {
-    ProtocolStatus,
-    protocols
-}
+module.exports = Protocols
