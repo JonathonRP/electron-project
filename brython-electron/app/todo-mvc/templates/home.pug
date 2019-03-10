@@ -47,6 +47,7 @@ html
                             |
                             button#TodoMVC TodoMVC
             
+        super()
         script(type="text/template." id="item-template")
             div.view
                 input(class="toggle" type="checkbox" checked=completed)
@@ -56,7 +57,7 @@ html
 
         script(type="text/template." id="stats-template")
             //- This should be `0 items left` by default
-            span.todo-count #[strong 0] remaining == 1 ? 'item' : 'items' left
+            span.todo-count #[strong 0] (remaining == 1 ? 'item' : 'items') left
             ul.filters
                 li
                     a.selected(href="/#") All
@@ -65,20 +66,15 @@ html
                 li
                     a(href="#/completed") Completed
 
-            if completed == 'true'
+            if completed
                 button#clear-completed.clear-completed Clear completed
-
-        
-        script(type="text/javascript" src="app://node_modules/brython/brython.js")
-        script(type="text/javascript" src="app://node_modules/brython/brython_stdlib.js")
-        script(type="text/javascript" src="app://node_modules/bootstrap/dist/js/bootstrap.bundle.js")
 
         script(type="text/javascript" src="app://node_modules/jquery/dist/jquery.js")
         script(type="text/javascript" src="app://node_modules/underscore/underscore.js")
         script(type="text/javascript" src="app://node_modules/backbone/backbone.js")
 
         script(type="text/javascript" src="todo-mvc://static/js/models/todo.js")
-        script(type="text/javascript" src="todo-mvc://static/js/models/todo.js")
+        script(type="text/javascript" src="todo-mvc://static/js/collections/todos.js")
         script(type="text/javascript" src="todo-mvc://static/js/views/todo-view.js")
         script(type="text/javascript" src="todo-mvc://static/js/views/app-view.js")
         script(type="text/javascript" src="todo-mvc://static/js/routers/router.js")
@@ -90,5 +86,10 @@ html
         script.
             $(function(){
                 app.todos.url = '{{ url_for("todos.create") }}';
+                console.log(`url: ${app.todos.url}`)
                 app.todos.reset({{ todos | tojson }});
             });
+        
+        script(type="text/javascript" src="app://node_modules/brython/brython.js")
+        script(type="text/javascript" src="app://node_modules/brython/brython_stdlib.js")
+        script(type="text/javascript" src="app://node_modules/bootstrap/dist/js/bootstrap.bundle.js")

@@ -1,6 +1,7 @@
 const {spawn} = require('child_process')
 const request = require('request')
 const {EventEmitter} = require('events')
+const logger = require('./logger')(__filename)
 
 var Status = {
     CheckIfServerIsRunning: "are you running?",
@@ -37,7 +38,7 @@ class Flask extends EventEmitter {
         self.emit(Status.Load, base_url)
       }).on('error', async function(e) {
   
-        console.error(e.message)
+        logger.error(e.message)
   
         if (e.message == "connect ECONNREFUSED 127.0.0.1:5000") {
           if(status == Status.CheckIfServerIsRunning) {
@@ -58,19 +59,20 @@ class Flask extends EventEmitter {
       server = await spawn(python_bin, ["-u", "app/todo-mvc/app.py"])
 
       server.stdout.on('data', (data) => {
-        console.log(data.toString())
+        logger.info(data.toString())
       })
 
       server.stderr.on('data', (data) => {
-        console.log(data.toString())
+        logger.debug(data.toString())
 
         if (data.toString().includes("Running")) {
           this.emit(Status.Running)
         }
       })
     } catch (err) {
+      logger.error(err)
       this.emit(Status.Error, err)
-      return console.log(err)
+      return
     }
   }
 
@@ -84,7 +86,7 @@ class Flask extends EventEmitter {
       this.emit(Status.Kill, status_code, body)
 
       if (error) {
-        console.error(error)
+        logger.error(error)
         this.emit(Status.Error, error)
         return
       }

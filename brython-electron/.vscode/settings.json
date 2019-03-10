@@ -5,5 +5,9 @@
     "tslint.jsEnable": true,
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
-    "python.linting.enabled": true
+    "python.linting.enabled": true,
+    "terminal.integrated.windowsEnableConpty": true,
+    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+    "terminal.integrated.shellArgs.windows": ["/K", "C:\\Program Files\\Cmder\\vscode.bat"]
 }

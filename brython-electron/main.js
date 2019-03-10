@@ -3,13 +3,14 @@ const path = require('path')
 const Url = require('url')
 const Protocols = require('./InternalProtocols')
 const Flask = require('./Server')
+const logger = require('./logger')(__filename)
 
 let app_dir = '/app/'
 let flask = new Flask()
 
 async function createWindow() {
 
-    await Protocols("setup", {pretty: true}).catch(err => console.error('protocols failed', err))
+    await Protocols("setup", {pretty: true}).catch(err => logger.error('protocols failed', err))
 
     let loading_win = new BrowserWindow({
       frame: false,
@@ -42,25 +43,25 @@ async function createWindow() {
 
     flask.on("server needs to be started", async () => {
 
-      console.log('server is starting...')
+      logger.verbose('server is starting...')
       await flask.Start()
     })
 
     flask.on("running", async (status) => {
 
-      console.log('loading...')
+      logger.verbose('loading...')
       await flask.Server("running")
     })
 
     flask.on("load", (url) => {
 
       win.loadURL(url)
-      // win.webContents.openDevTools()
+      win.webContents.openDevTools()
 
       win.once('ready-to-show', () => {
         win.show()
 
-        win.webContents.on('dom-ready', () => {
+        win.webContents.once('dom-ready', () => {
           loading_win.close()
         })
       })
@@ -68,15 +69,15 @@ async function createWindow() {
 
     flask.on("kill", (status_code, body) => {
 
-      console.log('app is closing...')
+      logger.verbose('app is closing...')
 
       if (status_code == 505) {
-        console.log(`${body}`)
+        logger.info(`${body}`)
       }
     })
 
     flask.on("killed", () => {
-      console.log('app is quiting...')
+      logger.verbose('app is quiting...')
       app.quit()
     })
 

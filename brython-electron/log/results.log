@@ -1,0 +1,1928 @@
+2019-03-09 17:39:32 error [Server.js]: connect ECONNREFUSED 127.0.0.1:5000
+2019-03-09 17:39:32 verbose [main.js]: server is starting...
+2019-03-09 17:39:38 verbose [Server.js]:  * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+
+2019-03-09 17:39:38 verbose [Server.js]:  * Restarting with stat
+
+2019-03-09 17:39:40 verbose [Server.js]:  * Debugger is active!
+
+2019-03-09 17:39:40 verbose [Server.js]:  * Debugger PIN: 217-057-426
+
+2019-03-09 17:39:40 verbose [Server.js]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+2019-03-09 17:39:40 verbose [main.js]: loading...
+2019-03-09 17:39:40 verbose [Server.js]: 127.0.0.1 - - [09/Mar/2019 17:39:40] "GET / HTTP/1.1" 500 -
+
+2019-03-09 17:39:40 verbose [Server.js]: Traceback (most recent call last):
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\electron-project\brython-electron\app\todo-mvc\controllers\home.py", line 11, in index
+    return render_template('home.pug', pretty=True, tasks=todo_list)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "D:\electron-project\brython-electron\app\todo-mvc\templates\home.pug", line 81, in top-level template code
+    script(type="text/javascript" src="todo-mvc://static/js/app.js")
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 327, in tojson_filter
+    return Markup(htmlsafe_dumps(obj, **kwargs))
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 242, in htmlsafe_dumps
+    rv = dumps(obj, **kwargs) \
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 179, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 81, in default
+    return _json.JSONEncoder.default(self, o)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Undefined is not JSON serializable
+127.0.0.1 - - [09/Mar/2019 17:39:40] "GET / HTTP/1.1" 500 -
+
+2019-03-09 17:39:41 verbose [Server.js]: Traceback (most recent call last):
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\electron-project\brython-electron\app\todo-mvc\controllers\home.py", line 11, in index
+    return render_template('home.pug', pretty=True, tasks=todo_list)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "D:\electron-project\brython-electron\app\todo-mvc\templates\home.pug", line 81, in top-level template code
+    script(type="text/javascript" src="todo-mvc://static/js/app.js")
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 327, in tojson_filter
+    return Markup(htmlsafe_dumps(obj, **kwargs))
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 242, in htmlsafe_dumps
+    rv = dumps(obj, **kwargs) \
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 179, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 81, in default
+    return _json.JSONEncoder.default(self, o)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Undefined is not JSON serializable
+127.0.0.1 - - [09/Mar/2019 17:39:41] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+
+2019-03-09 17:39:41 verbose [Server.js]: 127.0.0.1 - - [09/Mar/2019 17:39:41] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+
+2019-03-09 17:39:41 verbose [Server.js]: 127.0.0.1 - - [09/Mar/2019 17:39:41] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+
+2019-03-09 17:39:41 verbose [Server.js]: 127.0.0.1 - - [09/Mar/2019 17:39:41] "GET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+
+2019-03-09 17:39:41 verbose [Server.js]: 127.0.0.1 - - [09/Mar/2019 17:39:41] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+
+2019-03-09 17:39:58 verbose [Server.js]: 127.0.0.1 - - [09/Mar/2019 17:39:58] "POST /shutdown HTTP/1.1" 505 -
+
+2019-03-09 17:39:58 verbose [main.js]: app is closing...
+2019-03-09 17:39:58 verbose [main.js]: app is quiting...
+2019-03-09 17:41:55 error [Server.js]: connect ECONNREFUSED 127.0.0.1:5000
+2019-03-09 17:41:55 verbose [main.js]: server is starting...
+2019-03-09 17:41:56 verbose [Server.js]:  * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+
+2019-03-09 17:41:56 verbose [Server.js]:  * Debug mode: on
+
+2019-03-09 17:41:57 verbose [Server.js]:  * Restarting with stat
+
+2019-03-09 17:41:58 verbose [Server.js]:  * Debugger is active!
+
+2019-03-09 17:41:58 verbose [Server.js]:  * Debugger PIN: 217-057-426
+
+2019-03-09 17:41:58 verbose [Server.js]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+2019-03-09 17:41:58 verbose [main.js]: loading...
+2019-03-09 17:41:59 verbose [Server.js]: 127.0.0.1 - - [09/Mar/2019 17:41:59] "GET / HTTP/1.1" 500 -
+
+2019-03-09 17:41:59 verbose [Server.js]: Traceback (most recent call last):
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\electron-project\brython-electron\app\todo-mvc\controllers\home.py", line 11, in index
+    return render_template('home.pug', pretty=True, tasks=todo_list)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "D:\electron-project\brython-electron\app\todo-mvc\templates\home.pug", line 81, in top-level template code
+    script(type="text/javascript" src="todo-mvc://static/js/app.js")
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 327, in tojson_filter
+    return Markup(htmlsafe_dumps(obj, **kwargs))
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 242, in htmlsafe_dumps
+    rv = dumps(obj, **kwargs) \
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 179, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 81, in default
+    return _json.JSONEncoder.default(self, o)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Undefined is not JSON serializable
+127.0.0.1 - - [09/Mar/2019 17:41:59] "GET / HTTP/1.1" 500 -
+
+2019-03-09 17:41:59 verbose [Server.js]: Traceback (most recent call last):
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\electron-project\brython-electron\app\todo-mvc\controllers\home.py", line 11, in index
+    return render_template('home.pug', pretty=True, tasks=todo_list)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "D:\electron-project\brython-electron\app\todo-mvc\templates\home.pug", line 81, in top-level template code
+    script(type="text/javascript" src="todo-mvc://static/js/app.js")
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 327, in tojson_filter
+    return Markup(htmlsafe_dumps(obj, **kwargs))
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 242, in htmlsafe_dumps
+    rv = dumps(obj, **kwargs) \
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 179, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 81, in default
+    return _json.JSONEncoder.default(self, o)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Undefined is not JSON serializable
+127.0.0.1 - - [09/Mar/2019 17:41:59] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+
+2019-03-09 17:41:59 verbose [Server.js]: 127.0.0.1 - - [09/Mar/2019 17:41:59] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+
+2019-03-09 17:41:59 verbose [Server.js]: 127.0.0.1 - - [09/Mar/2019 17:41:59] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+
+2019-03-09 17:42:00 verbose [Server.js]: 127.0.0.1 - - [09/Mar/2019 17:42:00] "GET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+
+2019-03-09 17:42:00 verbose [Server.js]: 127.0.0.1 - - [09/Mar/2019 17:42:00] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+
+2019-03-09 17:42:14 verbose [Server.js]: 127.0.0.1 - - [09/Mar/2019 17:42:14] "POST /shutdown HTTP/1.1" 505 -
+
+2019-03-09 17:42:14 verbose [main.js]: app is closing...
+2019-03-09 17:42:14 info [main.js]: Server is shutting down...
+2019-03-09 17:42:14 verbose [main.js]: app is quiting...
+2019-03-09 17:49:52 error [Server.js]: connect ECONNREFUSED 127.0.0.1:5000
+2019-03-09 17:49:52 verbose [main.js]: server is starting...
+2019-03-09 17:49:53 info [Server.js]:  * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+
+2019-03-09 17:49:53 info [Server.js]:  * Debug mode: on
+
+2019-03-09 17:49:54 debug [Server.js]:  * Restarting with stat
+
+2019-03-09 17:49:55 debug [Server.js]:  * Debugger is active!
+
+2019-03-09 17:49:55 debug [Server.js]:  * Debugger PIN: 217-057-426
+
+2019-03-09 17:49:55 debug [Server.js]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+2019-03-09 17:49:55 verbose [main.js]: loading...
+2019-03-09 17:49:55 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 17:49:55] "GET / HTTP/1.1" 500 -
+
+2019-03-09 17:49:56 debug [Server.js]: Traceback (most recent call last):
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\electron-project\brython-electron\app\todo-mvc\controllers\home.py", line 11, in index
+    return render_template('home.pug', pretty=True, tasks=todo_list)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "D:\electron-project\brython-electron\app\todo-mvc\templates\home.pug", line 81, in top-level template code
+    script(type="text/javascript" src="todo-mvc://static/js/app.js")
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 327, in tojson_filter
+    return Markup(htmlsafe_dumps(obj, **kwargs))
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 242, in htmlsafe_dumps
+    rv = dumps(obj, **kwargs) \
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 179, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 81, in default
+    return _json.JSONEncoder.default(self, o)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Undefined is not JSON serializable
+127.0.0.1 - - [09/Mar/2019 17:49:56] "GET / HTTP/1.1" 500 -
+
+2019-03-09 17:49:56 debug [Server.js]: Traceback (most recent call last):
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\electron-project\brython-electron\app\todo-mvc\controllers\home.py", line 11, in index
+    return render_template('home.pug', pretty=True, tasks=todo_list)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "D:\electron-project\brython-electron\app\todo-mvc\templates\home.pug", line 81, in top-level template code
+    script(type="text/javascript" src="todo-mvc://static/js/app.js")
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 327, in tojson_filter
+    return Markup(htmlsafe_dumps(obj, **kwargs))
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 242, in htmlsafe_dumps
+    rv = dumps(obj, **kwargs) \
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 179, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 81, in default
+    return _json.JSONEncoder.default(self, o)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Undefined is not JSON serializable
+127.0.0.1 - - [09/Mar/2019 17:49:56] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+
+2019-03-09 17:49:56 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 17:49:56] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+
+2019-03-09 17:49:56 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 17:49:56] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+
+2019-03-09 17:49:57 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 17:49:57] "GET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+
+2019-03-09 17:49:57 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 17:49:57] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+
+2019-03-09 17:50:01 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 17:50:01] "POST /shutdown HTTP/1.1" 505 -
+
+2019-03-09 17:50:01 verbose [main.js]: app is closing...
+2019-03-09 17:50:01 info [main.js]: Server is shutting down...
+2019-03-09 17:50:01 verbose [main.js]: app is quiting...
+2019-03-09 17:53:49 error [Server.js]: connect ECONNREFUSED 127.0.0.1:5000
+2019-03-09 17:53:49 verbose [main.js]: server is starting...
+2019-03-09 17:53:50 info [Server.js]:  * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+
+2019-03-09 17:53:50 info [Server.js]:  * Debug mode: on
+
+2019-03-09 17:53:51 debug [Server.js]:  * Restarting with stat
+
+2019-03-09 17:53:52 debug [Server.js]:  * Debugger is active!
+
+2019-03-09 17:53:52 debug [Server.js]:  * Debugger PIN: 217-057-426
+
+2019-03-09 17:53:52 debug [Server.js]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+2019-03-09 17:53:52 verbose [main.js]: loading...
+2019-03-09 17:53:52 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 17:53:52] "GET / HTTP/1.1" 500 -
+
+2019-03-09 17:53:53 debug [Server.js]: Traceback (most recent call last):
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\electron-project\brython-electron\app\todo-mvc\controllers\home.py", line 11, in index
+    return render_template('home.pug', pretty=True, tasks=todo_list)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "D:\electron-project\brython-electron\app\todo-mvc\templates\home.pug", line 81, in top-level template code
+    script(type="text/javascript" src="todo-mvc://static/js/app.js")
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 327, in tojson_filter
+    return Markup(htmlsafe_dumps(obj, **kwargs))
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 242, in htmlsafe_dumps
+    rv = dumps(obj, **kwargs) \
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 179, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 81, in default
+    return _json.JSONEncoder.default(self, o)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Undefined is not JSON serializable
+127.0.0.1 - - [09/Mar/2019 17:53:53] "GET / HTTP/1.1" 500 -
+
+2019-03-09 17:53:53 debug [Server.js]: Traceback (most recent call last):
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\electron-project\brython-electron\app\todo-mvc\controllers\home.py", line 11, in index
+    return render_template('home.pug', pretty=True, tasks=todo_list)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "D:\electron-project\brython-electron\app\todo-mvc\templates\home.pug", line 81, in top-level template code
+    script(type="text/javascript" src="todo-mvc://static/js/app.js")
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 327, in tojson_filter
+    return Markup(htmlsafe_dumps(obj, **kwargs))
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 242, in htmlsafe_dumps
+    rv = dumps(obj, **kwargs) \
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 179, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 81, in default
+    return _json.JSONEncoder.default(self, o)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Undefined is not JSON serializable
+127.0.0.1 - - [09/Mar/2019 17:53:53] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+
+2019-03-09 17:53:53 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 17:53:53] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+
+2019-03-09 17:53:53 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 17:53:53] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+
+2019-03-09 17:53:54 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 17:53:54] "GET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+
+2019-03-09 17:53:54 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 17:53:54] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+
+2019-03-09 17:54:01 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 17:54:01] "POST /shutdown HTTP/1.1" 505 -
+
+2019-03-09 17:54:01 verbose [main.js]: app is closing...
+2019-03-09 17:54:01 info [main.js]: Server is shutting down...
+2019-03-09 17:54:01 verbose [main.js]: app is quiting...
+2019-03-09 17:56:54 error [Server.js]: connect ECONNREFUSED 127.0.0.1:5000
+2019-03-09 17:56:54 verbose [main.js]: server is starting...
+2019-03-09 17:56:55 info [Server.js]:  * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+
+2019-03-09 17:56:56 debug [Server.js]:  * Restarting with stat
+
+2019-03-09 17:56:57 debug [Server.js]:  * Debugger is active!
+
+2019-03-09 17:56:57 debug [Server.js]:  * Debugger PIN: 217-057-426
+
+2019-03-09 17:56:57 debug [Server.js]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+2019-03-09 17:56:57 verbose [main.js]: loading...
+2019-03-09 17:56:57 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 17:56:57] "GET / HTTP/1.1" 500 -
+
+2019-03-09 17:56:58 debug [Server.js]: Traceback (most recent call last):
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\electron-project\brython-electron\app\todo-mvc\controllers\home.py", line 11, in index
+    return render_template('home.pug', pretty=True, tasks=todo_list)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "D:\electron-project\brython-electron\app\todo-mvc\templates\home.pug", line 81, in top-level template code
+    script(type="text/javascript" src="todo-mvc://static/js/app.js")
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 327, in tojson_filter
+    return Markup(htmlsafe_dumps(obj, **kwargs))
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 242, in htmlsafe_dumps
+    rv = dumps(obj, **kwargs) \
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 179, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 81, in default
+    return _json.JSONEncoder.default(self, o)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Undefined is not JSON serializable
+127.0.0.1 - - [09/Mar/2019 17:56:58] "GET / HTTP/1.1" 500 -
+
+2019-03-09 17:56:58 debug [Server.js]: Traceback (most recent call last):
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\electron-project\brython-electron\app\todo-mvc\controllers\home.py", line 11, in index
+    return render_template('home.pug', pretty=True, tasks=todo_list)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "D:\electron-project\brython-electron\app\todo-mvc\templates\home.pug", line 81, in top-level template code
+    script(type="text/javascript" src="todo-mvc://static/js/app.js")
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 327, in tojson_filter
+    return Markup(htmlsafe_dumps(obj, **kwargs))
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 242, in htmlsafe_dumps
+    rv = dumps(obj, **kwargs) \
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 179, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 81, in default
+    return _json.JSONEncoder.default(self, o)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Undefined is not JSON serializable
+127.0.0.1 - - [09/Mar/2019 17:56:58] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+
+2019-03-09 17:56:58 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 17:56:58] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+
+2019-03-09 17:56:58 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 17:56:58] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+
+2019-03-09 17:56:59 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 17:56:59] "GET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+
+2019-03-09 17:56:59 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 17:56:59] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+
+2019-03-09 17:57:04 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 17:57:04] "POST /shutdown HTTP/1.1" 505 -
+
+2019-03-09 17:57:04 verbose [main.js]: app is closing...
+2019-03-09 17:57:04 info [main.js]: Server is shutting down...
+2019-03-09 17:57:04 verbose [main.js]: app is quiting...
+2019-03-09 17:59:46 error [Server.js]: connect ECONNREFUSED 127.0.0.1:5000
+2019-03-09 17:59:46 verbose [main.js]: server is starting...
+2019-03-09 17:59:47 info [Server.js]:  * Serving Flask app "app" (lazy loading)
+
+2019-03-09 17:59:47 info [Server.js]:  * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+
+2019-03-09 17:59:48 debug [Server.js]:  * Restarting with stat
+
+2019-03-09 17:59:49 debug [Server.js]:  * Debugger is active!
+
+2019-03-09 17:59:49 debug [Server.js]:  * Debugger PIN: 217-057-426
+
+2019-03-09 17:59:50 debug [Server.js]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+2019-03-09 17:59:50 verbose [main.js]: loading...
+2019-03-09 17:59:50 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 17:59:50] "GET / HTTP/1.1" 500 -
+
+2019-03-09 17:59:50 debug [Server.js]: Traceback (most recent call last):
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\electron-project\brython-electron\app\todo-mvc\controllers\home.py", line 11, in index
+    return render_template('home.pug', pretty=True, tasks=todo_list)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "D:\electron-project\brython-electron\app\todo-mvc\templates\home.pug", line 81, in top-level template code
+    script(type="text/javascript" src="todo-mvc://static/js/app.js")
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 327, in tojson_filter
+    return Markup(htmlsafe_dumps(obj, **kwargs))
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 242, in htmlsafe_dumps
+    rv = dumps(obj, **kwargs) \
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 179, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 81, in default
+    return _json.JSONEncoder.default(self, o)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Undefined is not JSON serializable
+127.0.0.1 - - [09/Mar/2019 17:59:50] "GET / HTTP/1.1" 500 -
+
+2019-03-09 17:59:50 debug [Server.js]: Traceback (most recent call last):
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\electron-project\brython-electron\app\todo-mvc\controllers\home.py", line 11, in index
+    return render_template('home.pug', pretty=True, tasks=todo_list)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "D:\electron-project\brython-electron\app\todo-mvc\templates\home.pug", line 81, in top-level template code
+    script(type="text/javascript" src="todo-mvc://static/js/app.js")
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 327, in tojson_filter
+    return Markup(htmlsafe_dumps(obj, **kwargs))
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 242, in htmlsafe_dumps
+    rv = dumps(obj, **kwargs) \
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 179, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 81, in default
+    return _json.JSONEncoder.default(self, o)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Undefined is not JSON serializable
+127.0.0.1 - - [09/Mar/2019 17:59:50] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+
+2019-03-09 17:59:51 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 17:59:51] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+
+2019-03-09 17:59:51 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 17:59:51] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+
+2019-03-09 17:59:51 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 17:59:51] "GET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+
+2019-03-09 17:59:51 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 17:59:51] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+
+2019-03-09 18:00:28 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:00:28] "POST /shutdown HTTP/1.1" 505 -
+
+2019-03-09 18:00:28 verbose [main.js]: app is closing...
+2019-03-09 18:00:28 info [main.js]: Server is shutting down...
+2019-03-09 18:00:28 verbose [main.js]: app is quiting...
+2019-03-09 18:02:39 error [Server.js]: connect ECONNREFUSED 127.0.0.1:5000
+2019-03-09 18:02:39 verbose [main.js]: server is starting...
+2019-03-09 18:02:40 info [Server.js]:  * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+
+2019-03-09 18:02:40 info [Server.js]:    Use a production WSGI server instead.
+ * Debug mode: on
+
+2019-03-09 18:02:41 debug [Server.js]:  * Restarting with stat
+
+2019-03-09 18:02:42 debug [Server.js]:  * Debugger is active!
+
+2019-03-09 18:02:42 debug [Server.js]:  * Debugger PIN: 217-057-426
+
+2019-03-09 18:02:42 debug [Server.js]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+2019-03-09 18:02:42 verbose [main.js]: loading...
+2019-03-09 18:02:42 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:02:42] "GET / HTTP/1.1" 500 -
+
+2019-03-09 18:02:43 debug [Server.js]: Traceback (most recent call last):
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\electron-project\brython-electron\app\todo-mvc\controllers\home.py", line 11, in index
+    return render_template('home.pug', pretty=True, tasks=todo_list)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "D:\electron-project\brython-electron\app\todo-mvc\templates\home.pug", line 81, in top-level template code
+    script(type="text/javascript" src="todo-mvc://static/js/app.js")
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 327, in tojson_filter
+    return Markup(htmlsafe_dumps(obj, **kwargs))
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 242, in htmlsafe_dumps
+    rv = dumps(obj, **kwargs) \
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 179, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 81, in default
+    return _json.JSONEncoder.default(self, o)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Undefined is not JSON serializable
+127.0.0.1 - - [09/Mar/2019 18:02:43] "GET / HTTP/1.1" 500 -
+
+2019-03-09 18:02:43 debug [Server.js]: Traceback (most recent call last):
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\electron-project\brython-electron\app\todo-mvc\controllers\home.py", line 11, in index
+    return render_template('home.pug', pretty=True, tasks=todo_list)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "D:\electron-project\brython-electron\app\todo-mvc\templates\home.pug", line 81, in top-level template code
+    script(type="text/javascript" src="todo-mvc://static/js/app.js")
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 327, in tojson_filter
+    return Markup(htmlsafe_dumps(obj, **kwargs))
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 242, in htmlsafe_dumps
+    rv = dumps(obj, **kwargs) \
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 179, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 81, in default
+    return _json.JSONEncoder.default(self, o)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Undefined is not JSON serializable
+127.0.0.1 - - [09/Mar/2019 18:02:43] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+
+2019-03-09 18:02:43 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:02:43] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+
+2019-03-09 18:02:43 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:02:43] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+
+2019-03-09 18:02:44 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:02:44] "GET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+
+2019-03-09 18:02:44 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:02:44] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+
+2019-03-09 18:02:51 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:02:51] "POST /shutdown HTTP/1.1" 505 -
+
+2019-03-09 18:02:51 verbose [main.js]: app is closing...
+2019-03-09 18:02:51 info [main.js]: Server is shutting down...
+2019-03-09 18:02:51 verbose [main.js]: app is quiting...
+2019-03-09 18:15:58 error [Server.js]: connect ECONNREFUSED 127.0.0.1:5000
+2019-03-09 18:15:58 verbose [main.js]: server is starting...
+2019-03-09 18:15:59 info [Server.js]:  * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+
+2019-03-09 18:15:59 debug [Server.js]:  * Restarting with stat
+
+2019-03-09 18:16:01 debug [Server.js]:  * Debugger is active!
+
+2019-03-09 18:16:01 debug [Server.js]:  * Debugger PIN: 217-057-426
+
+2019-03-09 18:16:01 debug [Server.js]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+2019-03-09 18:16:01 verbose [main.js]: loading...
+2019-03-09 18:16:01 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:16:01] "GET / HTTP/1.1" 500 -
+
+2019-03-09 18:16:01 debug [Server.js]: Traceback (most recent call last):
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\electron-project\brython-electron\app\todo-mvc\controllers\home.py", line 11, in index
+    return render_template('home.pug', pretty=True, tasks=todo_list)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "D:\electron-project\brython-electron\app\todo-mvc\templates\home.pug", line 82, in top-level template code
+    
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 327, in tojson_filter
+    return Markup(htmlsafe_dumps(obj, **kwargs))
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 242, in htmlsafe_dumps
+    rv = dumps(obj, **kwargs) \
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 179, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 81, in default
+    return _json.JSONEncoder.default(self, o)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Undefined is not JSON serializable
+127.0.0.1 - - [09/Mar/2019 18:16:01] "GET / HTTP/1.1" 500 -
+
+2019-03-09 18:16:01 debug [Server.js]: Traceback (most recent call last):
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\electron-project\brython-electron\app\todo-mvc\controllers\home.py", line 11, in index
+    return render_template('home.pug', pretty=True, tasks=todo_list)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "D:\electron-project\brython-electron\app\todo-mvc\templates\home.pug", line 82, in top-level template code
+    
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 327, in tojson_filter
+    return Markup(htmlsafe_dumps(obj, **kwargs))
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 242, in htmlsafe_dumps
+    rv = dumps(obj, **kwargs) \
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 179, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 81, in default
+    return _json.JSONEncoder.default(self, o)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Undefined is not JSON serializable
+127.0.0.1 - - [09/Mar/2019 18:16:01] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+
+2019-03-09 18:16:02 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:16:02] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+
+2019-03-09 18:16:02 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:16:02] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+
+2019-03-09 18:16:02 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:16:02] "GET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+
+2019-03-09 18:16:02 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:16:02] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+
+2019-03-09 18:16:22 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:16:22] "POST /shutdown HTTP/1.1" 505 -
+
+2019-03-09 18:16:22 verbose [main.js]: app is closing...
+2019-03-09 18:16:22 info [main.js]: Server is shutting down...
+2019-03-09 18:16:22 verbose [main.js]: app is quiting...
+2019-03-09 18:18:13 error [Server.js]: connect ECONNREFUSED 127.0.0.1:5000
+2019-03-09 18:18:13 verbose [main.js]: server is starting...
+2019-03-09 18:18:15 info [Server.js]:  * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+
+2019-03-09 18:18:15 info [Server.js]:    Use a production WSGI server instead.
+ * Debug mode: on
+
+2019-03-09 18:18:15 debug [Server.js]:  * Restarting with stat
+
+2019-03-09 18:18:17 debug [Server.js]:  * Debugger is active!
+
+2019-03-09 18:18:17 debug [Server.js]:  * Debugger PIN: 217-057-426
+
+2019-03-09 18:18:17 debug [Server.js]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+2019-03-09 18:18:17 verbose [main.js]: loading...
+2019-03-09 18:18:17 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:18:17] "GET / HTTP/1.1" 500 -
+
+2019-03-09 18:18:17 debug [Server.js]: Traceback (most recent call last):
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\electron-project\brython-electron\app\todo-mvc\controllers\home.py", line 11, in index
+    return render_template('home.pug', pretty=True, tasks=todo_list)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "D:\electron-project\brython-electron\app\todo-mvc\templates\home.pug", line 81, in top-level template code
+    script(type="text/javascript" src="todo-mvc://static/js/app.js")
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 327, in tojson_filter
+    return Markup(htmlsafe_dumps(obj, **kwargs))
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 242, in htmlsafe_dumps
+    rv = dumps(obj, **kwargs) \
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 179, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 81, in default
+    return _json.JSONEncoder.default(self, o)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Undefined is not JSON serializable
+127.0.0.1 - - [09/Mar/2019 18:18:17] "GET / HTTP/1.1" 500 -
+
+2019-03-09 18:18:17 debug [Server.js]: Traceback (most recent call last):
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\electron-project\brython-electron\app\todo-mvc\controllers\home.py", line 11, in index
+    return render_template('home.pug', pretty=True, tasks=todo_list)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "D:\electron-project\brython-electron\app\todo-mvc\templates\home.pug", line 81, in top-level template code
+    script(type="text/javascript" src="todo-mvc://static/js/app.js")
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 327, in tojson_filter
+    return Markup(htmlsafe_dumps(obj, **kwargs))
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 242, in htmlsafe_dumps
+    rv = dumps(obj, **kwargs) \
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 179, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 81, in default
+    return _json.JSONEncoder.default(self, o)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Undefined is not JSON serializable
+127.0.0.1 - - [09/Mar/2019 18:18:17] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+
+2019-03-09 18:18:18 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:18:18] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+
+2019-03-09 18:18:18 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:18:18] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+
+2019-03-09 18:18:18 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:18:18] "GET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+
+2019-03-09 18:18:18 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:18:18] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+
+2019-03-09 18:18:35 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:18:35] "POST /shutdown HTTP/1.1" 505 -
+
+2019-03-09 18:18:35 verbose [main.js]: app is closing...
+2019-03-09 18:18:35 info [main.js]: Server is shutting down...
+2019-03-09 18:18:35 verbose [main.js]: app is quiting...
+2019-03-09 18:22:10 error [Server.js]: connect ECONNREFUSED 127.0.0.1:5000
+2019-03-09 18:22:10 verbose [main.js]: server is starting...
+2019-03-09 18:22:11 info [Server.js]:  * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+
+2019-03-09 18:22:11 info [Server.js]:  * Debug mode: on
+
+2019-03-09 18:22:11 debug [Server.js]:  * Restarting with stat
+
+2019-03-09 18:22:13 debug [Server.js]:  * Debugger is active!
+
+2019-03-09 18:22:13 debug [Server.js]:  * Debugger PIN: 217-057-426
+
+2019-03-09 18:22:13 debug [Server.js]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+2019-03-09 18:22:13 verbose [main.js]: loading...
+2019-03-09 18:22:13 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:22:13] "GET / HTTP/1.1" 500 -
+
+2019-03-09 18:22:13 debug [Server.js]: Traceback (most recent call last):
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\electron-project\brython-electron\app\todo-mvc\controllers\home.py", line 11, in index
+    return render_template('home.pug', pretty=True, tasks=todo_list)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\loaders.py", line 125, in load
+    code = environment.compile(source, name, filename)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 579, in compile
+    source = self._parse(source, name, filename)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 497, in _parse
+    return Parser(self, source, name, encode_filename(filename)).parse()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\parser.py", line 40, in __init__
+    self.stream = environment._tokenize(source, name, filename, state)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 528, in _tokenize
+    source = self.preprocess(source, name, filename)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 522, in preprocess
+    self.iter_extensions(), text_type(source))
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 521, in <lambda>
+    return reduce(lambda s, e: e.preprocess(s, name, filename),
+  File "D:\electron-project\brython-electron\env\lib\site-packages\pypugjs\ext\jinja.py", line 162, in preprocess
+    return process(source, filename=name, compiler=Compiler, **self.options)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\pypugjs\utils.py", line 232, in process
+    block = _parser.parse()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\pypugjs\parser.py", line 52, in parse
+    block.append(self.parseExpr())
+  File "D:\electron-project\brython-electron\env\lib\site-packages\pypugjs\parser.py", line 95, in parseExpr
+    return getattr(self, funcName)()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\pypugjs\parser.py", line 363, in parseTag
+    block = self.block()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\pypugjs\parser.py", line 273, in block
+    block.append(self.parseExpr())
+  File "D:\electron-project\brython-electron\env\lib\site-packages\pypugjs\parser.py", line 95, in parseExpr
+    return getattr(self, funcName)()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\pypugjs\parser.py", line 363, in parseTag
+    block = self.block()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\pypugjs\parser.py", line 273, in block
+    block.append(self.parseExpr())
+  File "D:\electron-project\brython-electron\env\lib\site-packages\pypugjs\parser.py", line 95, in parseExpr
+    return getattr(self, funcName)()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\pypugjs\parser.py", line 363, in parseTag
+    block = self.block()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\pypugjs\parser.py", line 273, in block
+    block.append(self.parseExpr())
+  File "D:\electron-project\brython-electron\env\lib\site-packages\pypugjs\parser.py", line 95, in parseExpr
+    return getattr(self, funcName)()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\pypugjs\parser.py", line 188, in parseConditional
+    node.block = self.block()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\pypugjs\parser.py", line 268, in block
+    self.expect('indent')
+  File "D:\electron-project\brython-electron\env\lib\site-packages\pypugjs\parser.py", line 71, in expect
+    % (string, t, self.filename, self.line())
+Exception: expected "indent" but got "newline" in file home.pug on line 70
+127.0.0.1 - - [09/Mar/2019 18:22:13] "GET / HTTP/1.1" 500 -
+
+2019-03-09 18:22:14 debug [Server.js]: Traceback (most recent call last):
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\electron-project\brython-electron\app\todo-mvc\controllers\home.py", line 11, in index
+    return render_template('home.pug', pretty=True, tasks=todo_list)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\loaders.py", line 125, in load
+    code = environment.compile(source, name, filename)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 579, in compile
+    source = self._parse(source, name, filename)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 497, in _parse
+    return Parser(self, source, name, encode_filename(filename)).parse()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\parser.py", line 40, in __init__
+    self.stream = environment._tokenize(source, name, filename, state)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 528, in _tokenize
+    source = self.preprocess(source, name, filename)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 522, in preprocess
+    self.iter_extensions(), text_type(source))
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 521, in <lambda>
+    return reduce(lambda s, e: e.preprocess(s, name, filename),
+  File "D:\electron-project\brython-electron\env\lib\site-packages\pypugjs\ext\jinja.py", line 162, in preprocess
+    return process(source, filename=name, compiler=Compiler, **self.options)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\pypugjs\utils.py", line 232, in process
+    block = _parser.parse()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\pypugjs\parser.py", line 52, in parse
+    block.append(self.parseExpr())
+  File "D:\electron-project\brython-electron\env\lib\site-packages\pypugjs\parser.py", line 95, in parseExpr
+    return getattr(self, funcName)()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\pypugjs\parser.py", line 363, in parseTag
+    block = self.block()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\pypugjs\parser.py", line 273, in block
+    block.append(self.parseExpr())
+  File "D:\electron-project\brython-electron\env\lib\site-packages\pypugjs\parser.py", line 95, in parseExpr
+    return getattr(self, funcName)()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\pypugjs\parser.py", line 363, in parseTag
+    block = self.block()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\pypugjs\parser.py", line 273, in block
+    block.append(self.parseExpr())
+  File "D:\electron-project\brython-electron\env\lib\site-packages\pypugjs\parser.py", line 95, in parseExpr
+    return getattr(self, funcName)()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\pypugjs\parser.py", line 363, in parseTag
+    block = self.block()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\pypugjs\parser.py", line 273, in block
+    block.append(self.parseExpr())
+  File "D:\electron-project\brython-electron\env\lib\site-packages\pypugjs\parser.py", line 95, in parseExpr
+    return getattr(self, funcName)()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\pypugjs\parser.py", line 188, in parseConditional
+    node.block = self.block()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\pypugjs\parser.py", line 268, in block
+    self.expect('indent')
+  File "D:\electron-project\brython-electron\env\lib\site-packages\pypugjs\parser.py", line 71, in expect
+    % (string, t, self.filename, self.line())
+Exception: expected "indent" but got "newline" in file home.pug on line 70
+127.0.0.1 - - [09/Mar/2019 18:22:14] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+
+2019-03-09 18:22:14 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:22:14] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+
+2019-03-09 18:22:14 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:22:14] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+
+2019-03-09 18:22:14 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:22:14] "GET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+
+2019-03-09 18:22:15 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:22:15] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+
+2019-03-09 18:22:22 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:22:22] "POST /shutdown HTTP/1.1" 505 -
+
+2019-03-09 18:22:22 verbose [main.js]: app is closing...
+2019-03-09 18:22:22 info [main.js]: Server is shutting down...
+2019-03-09 18:22:22 verbose [main.js]: app is quiting...
+2019-03-09 18:22:39 error [Server.js]: connect ECONNREFUSED 127.0.0.1:5000
+2019-03-09 18:22:39 verbose [main.js]: server is starting...
+2019-03-09 18:22:40 info [Server.js]:  * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+
+2019-03-09 18:22:40 info [Server.js]:    Use a production WSGI server instead.
+ * Debug mode: on
+
+2019-03-09 18:22:41 debug [Server.js]:  * Restarting with stat
+
+2019-03-09 18:22:42 debug [Server.js]:  * Debugger is active!
+
+2019-03-09 18:22:42 debug [Server.js]:  * Debugger PIN: 217-057-426
+
+2019-03-09 18:22:42 debug [Server.js]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+2019-03-09 18:22:42 verbose [main.js]: loading...
+2019-03-09 18:22:43 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:22:43] "GET / HTTP/1.1" 500 -
+
+2019-03-09 18:22:43 debug [Server.js]: Traceback (most recent call last):
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\electron-project\brython-electron\app\todo-mvc\controllers\home.py", line 11, in index
+    return render_template('home.pug', pretty=True, tasks=todo_list)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "D:\electron-project\brython-electron\app\todo-mvc\templates\home.pug", line 81, in top-level template code
+    script(type="text/javascript" src="todo-mvc://static/js/app.js")
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 327, in tojson_filter
+    return Markup(htmlsafe_dumps(obj, **kwargs))
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 242, in htmlsafe_dumps
+    rv = dumps(obj, **kwargs) \
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 179, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 81, in default
+    return _json.JSONEncoder.default(self, o)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Undefined is not JSON serializable
+127.0.0.1 - - [09/Mar/2019 18:22:43] "GET / HTTP/1.1" 500 -
+
+2019-03-09 18:22:43 debug [Server.js]: Traceback (most recent call last):
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\electron-project\brython-electron\app\todo-mvc\controllers\home.py", line 11, in index
+    return render_template('home.pug', pretty=True, tasks=todo_list)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "D:\electron-project\brython-electron\app\todo-mvc\templates\home.pug", line 81, in top-level template code
+    script(type="text/javascript" src="todo-mvc://static/js/app.js")
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 327, in tojson_filter
+    return Markup(htmlsafe_dumps(obj, **kwargs))
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 242, in htmlsafe_dumps
+    rv = dumps(obj, **kwargs) \
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 179, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 81, in default
+    return _json.JSONEncoder.default(self, o)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Undefined is not JSON serializable
+127.0.0.1 - - [09/Mar/2019 18:22:43] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+
+2019-03-09 18:22:44 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:22:44] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+
+2019-03-09 18:22:44 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:22:44] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+
+2019-03-09 18:22:44 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:22:44] "GET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+
+2019-03-09 18:22:44 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:22:44] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+
+2019-03-09 18:23:00 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:23:00] "POST /shutdown HTTP/1.1" 505 -
+
+2019-03-09 18:23:00 verbose [main.js]: app is closing...
+2019-03-09 18:23:00 info [main.js]: Server is shutting down...
+2019-03-09 18:23:00 verbose [main.js]: app is quiting...
+2019-03-09 18:32:07 error [Server.js]: connect ECONNREFUSED 127.0.0.1:5000
+2019-03-09 18:32:07 verbose [main.js]: server is starting...
+2019-03-09 18:32:08 info [Server.js]:  * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+
+2019-03-09 18:32:08 info [Server.js]:    Use a production WSGI server instead.
+ * Debug mode: on
+
+2019-03-09 18:32:09 debug [Server.js]:  * Restarting with stat
+
+2019-03-09 18:32:10 debug [Server.js]:  * Debugger is active!
+
+2019-03-09 18:32:10 debug [Server.js]:  * Debugger PIN: 217-057-426
+
+2019-03-09 18:32:10 debug [Server.js]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+2019-03-09 18:32:10 verbose [main.js]: loading...
+2019-03-09 18:32:10 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:32:10] "GET / HTTP/1.1" 500 -
+
+2019-03-09 18:32:11 debug [Server.js]: Traceback (most recent call last):
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\electron-project\brython-electron\app\todo-mvc\controllers\home.py", line 11, in index
+    return render_template('home.pug', pretty=True, tasks=todo_list)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "D:\electron-project\brython-electron\app\todo-mvc\templates\home.pug", line 82, in top-level template code
+    script(type="text/javascript" src="todo-mvc://static/js/app.js")
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 327, in tojson_filter
+    return Markup(htmlsafe_dumps(obj, **kwargs))
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 242, in htmlsafe_dumps
+    rv = dumps(obj, **kwargs) \
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 179, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 81, in default
+    return _json.JSONEncoder.default(self, o)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Undefined is not JSON serializable
+127.0.0.1 - - [09/Mar/2019 18:32:11] "GET / HTTP/1.1" 500 -
+
+2019-03-09 18:32:11 debug [Server.js]: Traceback (most recent call last):
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\electron-project\brython-electron\app\todo-mvc\controllers\home.py", line 11, in index
+    return render_template('home.pug', pretty=True, tasks=todo_list)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "D:\electron-project\brython-electron\app\todo-mvc\templates\home.pug", line 82, in top-level template code
+    script(type="text/javascript" src="todo-mvc://static/js/app.js")
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 327, in tojson_filter
+    return Markup(htmlsafe_dumps(obj, **kwargs))
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 242, in htmlsafe_dumps
+    rv = dumps(obj, **kwargs) \
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 179, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 81, in default
+    return _json.JSONEncoder.default(self, o)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Undefined is not JSON serializable
+127.0.0.1 - - [09/Mar/2019 18:32:11] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+
+2019-03-09 18:32:11 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:32:11] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+
+2019-03-09 18:32:11 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:32:11] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+
+2019-03-09 18:32:12 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:32:12] "GET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+
+2019-03-09 18:32:12 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:32:12] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+
+2019-03-09 18:32:24 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:32:24] "POST /shutdown HTTP/1.1" 505 -
+
+2019-03-09 18:32:24 verbose [main.js]: app is closing...
+2019-03-09 18:32:24 info [main.js]: Server is shutting down...
+2019-03-09 18:32:24 verbose [main.js]: app is quiting...
+2019-03-09 18:33:27 error [Server.js]: connect ECONNREFUSED 127.0.0.1:5000
+2019-03-09 18:33:27 verbose [main.js]: server is starting...
+2019-03-09 18:33:28 info [Server.js]:  * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+
+2019-03-09 18:33:29 debug [Server.js]:  * Restarting with stat
+
+2019-03-09 18:33:31 debug [Server.js]:  * Debugger is active!
+
+2019-03-09 18:33:31 debug [Server.js]:  * Debugger PIN: 217-057-426
+
+2019-03-09 18:33:31 debug [Server.js]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+2019-03-09 18:33:31 verbose [main.js]: loading...
+2019-03-09 18:33:31 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:33:31] "GET / HTTP/1.1" 500 -
+
+2019-03-09 18:33:31 debug [Server.js]: Traceback (most recent call last):
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\electron-project\brython-electron\app\todo-mvc\controllers\home.py", line 11, in index
+    return render_template('home.pug', pretty=True, tasks=todo_list)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "D:\electron-project\brython-electron\app\todo-mvc\templates\home.pug", line 81, in top-level template code
+    script(type="text/javascript" src="todo-mvc://static/js/app.js")
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 327, in tojson_filter
+    return Markup(htmlsafe_dumps(obj, **kwargs))
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 242, in htmlsafe_dumps
+    rv = dumps(obj, **kwargs) \
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 179, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 81, in default
+    return _json.JSONEncoder.default(self, o)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Undefined is not JSON serializable
+127.0.0.1 - - [09/Mar/2019 18:33:31] "GET / HTTP/1.1" 500 -
+
+2019-03-09 18:33:31 debug [Server.js]: Traceback (most recent call last):
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\electron-project\brython-electron\app\todo-mvc\controllers\home.py", line 11, in index
+    return render_template('home.pug', pretty=True, tasks=todo_list)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "D:\electron-project\brython-electron\app\todo-mvc\templates\home.pug", line 81, in top-level template code
+    script(type="text/javascript" src="todo-mvc://static/js/app.js")
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 327, in tojson_filter
+    return Markup(htmlsafe_dumps(obj, **kwargs))
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 242, in htmlsafe_dumps
+    rv = dumps(obj, **kwargs) \
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 179, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "D:\electron-project\brython-electron\env\lib\site-packages\flask\json\__init__.py", line 81, in default
+    return _json.JSONEncoder.default(self, o)
+  File "C:\Users\jrees\AppData\Local\Programs\Python\Python37-32\Lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Undefined is not JSON serializable
+127.0.0.1 - - [09/Mar/2019 18:33:31] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+
+2019-03-09 18:33:32 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:33:32] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+
+2019-03-09 18:33:32 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:33:32] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+
+2019-03-09 18:33:32 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:33:32] "GET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+
+2019-03-09 18:33:32 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:33:32] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+
+2019-03-09 18:33:41 debug [Server.js]: 127.0.0.1 - - [09/Mar/2019 18:33:41] "POST /shutdown HTTP/1.1" 505 -
+
+2019-03-09 18:33:41 verbose [main.js]: app is closing...
+2019-03-09 18:33:41 info [main.js]: Server is shutting down...
+2019-03-09 18:33:41 verbose [main.js]: app is quiting...
