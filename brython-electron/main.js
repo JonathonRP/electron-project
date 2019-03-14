@@ -1,9 +1,9 @@
 const {app, BrowserWindow} = require('electron')
 const path = require('path')
 const Url = require('url')
-const Protocols = require('./InternalProtocols')
-const Flask = require('./Server')
-const logger = require('./logger')(__filename)
+const Protocols = require('./settings_utils/InternalProtocols')
+const Flask = require('./settings_utils/Server')
+const logger = require('./settings_utils/logger')(__filename)
 
 let app_dir = '/app/'
 let flask = new Flask()
@@ -47,7 +47,7 @@ async function createWindow() {
       await flask.Start()
     })
 
-    flask.on("running", async (status) => {
+    flask.on("running", async () => {
 
       logger.verbose('loading...')
       await flask.Server("running")
@@ -56,7 +56,7 @@ async function createWindow() {
     flask.on("load", (url) => {
 
       win.loadURL(url)
-      win.webContents.openDevTools()
+      // win.webContents.openDevTools()
 
       win.once('ready-to-show', () => {
         win.show()
