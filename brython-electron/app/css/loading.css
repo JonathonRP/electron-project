@@ -7,7 +7,7 @@
   position: absolute;
   width: 30px;
   height: 30px;
-  background: radial-gradient(circle, #FBE043 15%, #367FC6 45%, #75D8F4 65%);
+  background: radial-gradient(circle, #FBE043 15%, #367FC6 55%, #75D8F4 65%);
   border-radius: 50%;
   top: 50%;
   left: 50%;
@@ -68,7 +68,7 @@
   left: 50%;
   width: 15px;
   height: 15px;
-  background: radial-gradient(circle, #FBE043 15%, #367FC6 45%, #75D8F4 65%);
+  background: radial-gradient(circle, #FBE043 15%, #367FC6 55%, #75D8F4 65%);
   border-radius: 50%;
   -webkit-transform: translate(-50%, -50%) translate(52px, 0);
           transform: translate(-50%, -50%) translate(52px, 0);
@@ -80,7 +80,7 @@
   left: 50%;
   width: 15px;
   height: 15px;
-  background: radial-gradient(circle, #FBE043 15%, #367FC6 45%, #75D8F4 65%);
+  background: radial-gradient(circle, #FBE043 15%, #367FC6 55%, #75D8F4 65%);
   border-radius: 50%;
   -webkit-transform: translate(-50%, -50%) translate(-52px, 0);
           transform: translate(-50%, -50%) translate(-52px, 0);
@@ -127,7 +127,7 @@
   left: 50%;
   width: 12px;
   height: 12px;
-  background: radial-gradient(circle, #FBE043 15%, #367FC6 45%, #75D8F4 65%);
+  background: radial-gradient(circle, #FBE043 15%, #367FC6 55%, #75D8F4 65%);
   border-radius: 50%;
   -webkit-transform: translate(-50%, -50%) translate(33px, 0);
           transform: translate(-50%, -50%) translate(33px, 0);
@@ -139,7 +139,7 @@
   left: 50%;
   width: 12px;
   height: 12px;
-  background: radial-gradient(circle, #FBE043 15%, #367FC6 45%, #75D8F4 65%);
+  background: radial-gradient(circle, #FBE043 15%, #367FC6 55%, #75D8F4 65%);
   border-radius: 50%;
   -webkit-transform: translate(-50%, -50%) translate(-33px, 0);
           transform: translate(-50%, -50%) translate(-33px, 0);

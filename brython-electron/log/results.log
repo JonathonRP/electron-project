@@ -10289,3 +10289,441 @@ TypeError: Object of type map is not JSON serializable
 2019-03-14 16:00:54 verbose [main.js]: app is quiting...
 =======
 >>>>>>> #1
+2019-03-14 17:28:41 error [Server.js]: connect ECONNREFUSED 127.0.0.1:5000
+2019-03-14 17:28:41 verbose [main.js]: server is starting...
+2019-03-14 17:28:48 info [Server.js]:  * Serving Flask app "todo_mvc" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+
+2019-03-14 17:28:48 info [Server.js]:  * Debug mode: on
+
+2019-03-14 17:28:50 debug [Server.js]:  * Restarting with stat
+
+2019-03-14 17:28:53 debug [Server.js]:  * Debugger is active!
+
+2019-03-14 17:28:54 debug [Server.js]:  * Debugger PIN: 217-057-426
+
+2019-03-14 17:28:54 debug [Server.js]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+2019-03-14 17:28:54 verbose [main.js]: loading...
+2019-03-14 17:28:54 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:28:54] "GET / HTTP/1.1" 200 -
+
+2019-03-14 17:28:54 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:28:54] "GET / HTTP/1.1" 200 -
+
+2019-03-14 17:30:01 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:30:01] "POST /shutdown HTTP/1.1" 505 -
+
+2019-03-14 17:30:01 verbose [main.js]: app is closing...
+2019-03-14 17:30:01 info [main.js]: Server is shutting down...
+2019-03-14 17:30:01 verbose [main.js]: app is quiting...
+2019-03-14 17:33:46 error [Server.js]: connect ECONNREFUSED 127.0.0.1:5000
+2019-03-14 17:33:46 verbose [main.js]: server is starting...
+2019-03-14 17:33:51 info [Server.js]:  * Serving Flask app "todo_mvc" (lazy loading)
+ * Environment: production
+
+2019-03-14 17:33:51 info [Server.js]:    WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+
+2019-03-14 17:33:53 debug [Server.js]:  * Restarting with stat
+
+2019-03-14 17:33:59 debug [Server.js]:  * Debugger is active!
+
+2019-03-14 17:33:59 debug [Server.js]:  * Debugger PIN: 217-057-426
+
+2019-03-14 17:33:59 debug [Server.js]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+2019-03-14 17:33:59 verbose [main.js]: loading...
+2019-03-14 17:33:59 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:33:59] "GET / HTTP/1.1" 200 -
+
+2019-03-14 17:33:59 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:33:59] "GET / HTTP/1.1" 200 -
+
+2019-03-14 17:34:06 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:34:06] "POST /shutdown HTTP/1.1" 505 -
+
+2019-03-14 17:34:06 verbose [main.js]: app is closing...
+2019-03-14 17:34:06 info [main.js]: Server is shutting down...
+2019-03-14 17:34:06 verbose [main.js]: app is quiting...
+2019-03-14 17:34:48 error [Server.js]: connect ECONNREFUSED 127.0.0.1:5000
+2019-03-14 17:34:48 verbose [main.js]: server is starting...
+2019-03-14 17:34:52 info [Server.js]:  * Serving Flask app "todo_mvc" (lazy loading)
+ * Environment: production
+
+2019-03-14 17:34:52 info [Server.js]:    WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+
+2019-03-14 17:34:54 debug [Server.js]:  * Restarting with stat
+
+2019-03-14 17:34:59 debug [Server.js]:  * Debugger is active!
+
+2019-03-14 17:34:59 debug [Server.js]:  * Debugger PIN: 217-057-426
+
+2019-03-14 17:34:59 debug [Server.js]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+2019-03-14 17:34:59 verbose [main.js]: loading...
+2019-03-14 17:34:59 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:34:59] "GET / HTTP/1.1" 200 -
+
+2019-03-14 17:35:00 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:35:00] "GET / HTTP/1.1" 200 -
+
+2019-03-14 17:35:09 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:35:09] "POST /shutdown HTTP/1.1" 505 -
+
+2019-03-14 17:35:09 verbose [main.js]: app is closing...
+2019-03-14 17:35:09 info [main.js]: Server is shutting down...
+2019-03-14 17:35:09 verbose [main.js]: app is quiting...
+2019-03-14 17:39:20 error [Server.js]: connect ECONNREFUSED 127.0.0.1:5000
+2019-03-14 17:39:20 verbose [main.js]: server is starting...
+2019-03-14 17:39:24 info [Server.js]:  * Serving Flask app "todo_mvc" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+
+2019-03-14 17:39:26 debug [Server.js]:  * Restarting with stat
+
+2019-03-14 17:39:30 debug [Server.js]:  * Debugger is active!
+
+2019-03-14 17:39:30 debug [Server.js]:  * Debugger PIN: 217-057-426
+
+2019-03-14 17:39:30 debug [Server.js]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+2019-03-14 17:39:30 verbose [main.js]: loading...
+2019-03-14 17:39:31 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:39:31] "GET / HTTP/1.1" 200 -
+
+2019-03-14 17:39:31 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:39:31] "GET / HTTP/1.1" 200 -
+
+2019-03-14 17:39:35 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:39:35] "POST /shutdown HTTP/1.1" 505 -
+
+2019-03-14 17:40:57 error [Server.js]: connect ECONNREFUSED 127.0.0.1:5000
+2019-03-14 17:40:57 verbose [main.js]: server is starting...
+2019-03-14 17:41:01 info [Server.js]:  * Serving Flask app "todo_mvc" (lazy loading)
+
+2019-03-14 17:41:01 info [Server.js]:  * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+
+2019-03-14 17:41:03 debug [Server.js]:  * Restarting with stat
+
+2019-03-14 17:41:07 debug [Server.js]:  * Debugger is active!
+
+2019-03-14 17:41:07 debug [Server.js]:  * Debugger PIN: 217-057-426
+
+2019-03-14 17:41:07 debug [Server.js]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+2019-03-14 17:41:07 verbose [main.js]: loading...
+2019-03-14 17:41:07 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:41:07] "GET / HTTP/1.1" 200 -
+
+2019-03-14 17:41:07 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:41:07] "GET / HTTP/1.1" 200 -
+
+2019-03-14 17:41:13 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:41:13] "POST /shutdown HTTP/1.1" 505 -
+
+2019-03-14 17:41:13 verbose [main.js]: app is closing...
+2019-03-14 17:41:13 info [main.js]: Server is shutting down...
+2019-03-14 17:41:13 verbose [main.js]: app is quiting...
+2019-03-14 17:42:14 error [Server.js]: connect ECONNREFUSED 127.0.0.1:5000
+2019-03-14 17:42:14 verbose [main.js]: server is starting...
+2019-03-14 17:42:18 info [Server.js]:  * Serving Flask app "todo_mvc" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+
+2019-03-14 17:42:18 info [Server.js]:    Use a production WSGI server instead.
+ * Debug mode: on
+
+2019-03-14 17:42:20 debug [Server.js]:  * Restarting with stat
+
+2019-03-14 17:42:25 debug [Server.js]:  * Debugger is active!
+
+2019-03-14 17:42:25 debug [Server.js]:  * Debugger PIN: 217-057-426
+
+2019-03-14 17:42:25 debug [Server.js]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+2019-03-14 17:42:25 verbose [main.js]: loading...
+2019-03-14 17:42:25 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:42:25] "GET / HTTP/1.1" 200 -
+
+2019-03-14 17:42:26 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:42:26] "GET / HTTP/1.1" 200 -
+
+2019-03-14 17:42:34 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:42:34] "POST /shutdown HTTP/1.1" 505 -
+
+2019-03-14 17:42:34 verbose [main.js]: app is closing...
+2019-03-14 17:42:34 info [main.js]: Server is shutting down...
+2019-03-14 17:42:34 verbose [main.js]: app is quiting...
+2019-03-14 17:45:41 error [Server.js]: connect ECONNREFUSED 127.0.0.1:5000
+2019-03-14 17:45:41 verbose [main.js]: server is starting...
+2019-03-14 17:45:44 info [Server.js]:  * Serving Flask app "todo_mvc" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+
+2019-03-14 17:45:44 info [Server.js]:    Use a production WSGI server instead.
+ * Debug mode: on
+
+2019-03-14 17:45:46 debug [Server.js]:  * Restarting with stat
+
+2019-03-14 17:45:50 debug [Server.js]:  * Debugger is active!
+
+2019-03-14 17:45:50 debug [Server.js]:  * Debugger PIN: 217-057-426
+
+2019-03-14 17:45:50 debug [Server.js]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+2019-03-14 17:45:50 verbose [main.js]: loading...
+2019-03-14 17:45:50 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:45:50] "GET / HTTP/1.1" 200 -
+
+2019-03-14 17:45:50 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:45:50] "GET / HTTP/1.1" 200 -
+
+2019-03-14 17:46:00 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:46:00] "POST /shutdown HTTP/1.1" 505 -
+
+2019-03-14 17:46:00 verbose [main.js]: app is closing...
+2019-03-14 17:46:00 info [main.js]: Server is shutting down...
+2019-03-14 17:46:00 verbose [main.js]: app is quiting...
+2019-03-14 17:46:27 error [Server.js]: connect ECONNREFUSED 127.0.0.1:5000
+2019-03-14 17:46:27 verbose [main.js]: server is starting...
+2019-03-14 17:46:30 info [Server.js]:  * Serving Flask app "todo_mvc" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+
+2019-03-14 17:46:30 info [Server.js]:    Use a production WSGI server instead.
+ * Debug mode: on
+
+2019-03-14 17:46:32 debug [Server.js]:  * Restarting with stat
+
+2019-03-14 17:46:36 debug [Server.js]:  * Debugger is active!
+
+2019-03-14 17:46:36 debug [Server.js]:  * Debugger PIN: 217-057-426
+
+2019-03-14 17:46:36 debug [Server.js]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+2019-03-14 17:46:36 verbose [main.js]: loading...
+2019-03-14 17:46:37 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:46:37] "GET / HTTP/1.1" 200 -
+
+2019-03-14 17:46:37 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:46:37] "GET / HTTP/1.1" 200 -
+
+2019-03-14 17:46:43 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:46:43] "POST /shutdown HTTP/1.1" 505 -
+
+2019-03-14 17:46:43 verbose [main.js]: app is closing...
+2019-03-14 17:46:43 info [main.js]: Server is shutting down...
+2019-03-14 17:46:43 verbose [main.js]: app is quiting...
+2019-03-14 17:47:06 error [Server.js]: connect ECONNREFUSED 127.0.0.1:5000
+2019-03-14 17:47:06 verbose [main.js]: server is starting...
+2019-03-14 17:47:09 info [Server.js]:  * Serving Flask app "todo_mvc" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+
+2019-03-14 17:47:09 info [Server.js]:    Use a production WSGI server instead.
+ * Debug mode: on
+
+2019-03-14 17:47:10 debug [Server.js]:  * Restarting with stat
+
+2019-03-14 17:47:14 debug [Server.js]:  * Debugger is active!
+
+2019-03-14 17:47:14 debug [Server.js]:  * Debugger PIN: 217-057-426
+
+2019-03-14 17:47:14 debug [Server.js]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+2019-03-14 17:47:14 verbose [main.js]: loading...
+2019-03-14 17:47:14 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:47:14] "GET / HTTP/1.1" 200 -
+
+2019-03-14 17:47:15 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:47:15] "GET / HTTP/1.1" 200 -
+
+2019-03-14 17:47:20 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:47:20] "POST /shutdown HTTP/1.1" 505 -
+
+2019-03-14 17:47:20 verbose [main.js]: app is closing...
+2019-03-14 17:47:20 info [main.js]: Server is shutting down...
+2019-03-14 17:47:20 verbose [main.js]: app is quiting...
+2019-03-14 17:48:10 error [Server.js]: connect ECONNREFUSED 127.0.0.1:5000
+2019-03-14 17:48:10 verbose [main.js]: server is starting...
+2019-03-14 17:48:13 info [Server.js]:  * Serving Flask app "todo_mvc" (lazy loading)
+ * Environment: production
+
+2019-03-14 17:48:13 info [Server.js]:    WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+
+2019-03-14 17:48:15 debug [Server.js]:  * Restarting with stat
+
+2019-03-14 17:48:18 debug [Server.js]:  * Debugger is active!
+
+2019-03-14 17:48:18 debug [Server.js]:  * Debugger PIN: 217-057-426
+
+2019-03-14 17:48:19 debug [Server.js]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+2019-03-14 17:48:19 verbose [main.js]: loading...
+2019-03-14 17:48:19 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:48:19] "GET / HTTP/1.1" 200 -
+
+2019-03-14 17:48:19 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:48:19] "GET / HTTP/1.1" 200 -
+
+2019-03-14 17:48:27 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:48:27] "POST /shutdown HTTP/1.1" 505 -
+
+2019-03-14 17:48:27 verbose [main.js]: app is closing...
+2019-03-14 17:48:27 info [main.js]: Server is shutting down...
+2019-03-14 17:48:27 verbose [main.js]: app is quiting...
+2019-03-14 17:49:57 error [Server.js]: connect ECONNREFUSED 127.0.0.1:5000
+2019-03-14 17:49:57 verbose [main.js]: server is starting...
+2019-03-14 17:50:00 info [Server.js]:  * Serving Flask app "todo_mvc" (lazy loading)
+
+2019-03-14 17:50:00 info [Server.js]:  * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+
+2019-03-14 17:50:02 debug [Server.js]:  * Restarting with stat
+
+2019-03-14 17:50:08 debug [Server.js]:  * Debugger is active!
+ * Debugger PIN: 217-057-426
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+2019-03-14 17:50:08 verbose [main.js]: loading...
+2019-03-14 17:50:09 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:50:09] "GET / HTTP/1.1" 200 -
+
+2019-03-14 17:50:09 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:50:09] "GET / HTTP/1.1" 200 -
+
+2019-03-14 17:50:18 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:50:18] "POST /shutdown HTTP/1.1" 505 -
+
+2019-03-14 17:50:18 verbose [main.js]: app is closing...
+2019-03-14 17:50:18 info [main.js]: Server is shutting down...
+2019-03-14 17:50:18 verbose [main.js]: app is quiting...
+2019-03-14 17:50:28 error [Server.js]: connect ECONNREFUSED 127.0.0.1:5000
+2019-03-14 17:50:28 verbose [main.js]: server is starting...
+2019-03-14 17:50:30 info [Server.js]:  * Serving Flask app "todo_mvc" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+
+2019-03-14 17:50:32 debug [Server.js]:  * Restarting with stat
+
+2019-03-14 17:50:39 debug [Server.js]:  * Debugger is active!
+
+2019-03-14 17:50:39 debug [Server.js]:  * Debugger PIN: 217-057-426
+
+2019-03-14 17:50:39 debug [Server.js]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+2019-03-14 17:50:39 verbose [main.js]: loading...
+2019-03-14 17:50:40 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:50:40] "GET / HTTP/1.1" 200 -
+
+2019-03-14 17:50:40 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:50:40] "GET / HTTP/1.1" 200 -
+
+2019-03-14 17:50:48 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:50:48] "POST /shutdown HTTP/1.1" 505 -
+
+2019-03-14 17:50:48 verbose [main.js]: app is closing...
+2019-03-14 17:50:48 info [main.js]: Server is shutting down...
+2019-03-14 17:50:48 verbose [main.js]: app is quiting...
+2019-03-14 17:51:25 error [Server.js]: connect ECONNREFUSED 127.0.0.1:5000
+2019-03-14 17:51:25 verbose [main.js]: server is starting...
+2019-03-14 17:51:27 info [Server.js]:  * Serving Flask app "todo_mvc" (lazy loading)
+
+2019-03-14 17:51:28 info [Server.js]:  * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+
+2019-03-14 17:51:29 debug [Server.js]:  * Restarting with stat
+
+2019-03-14 17:51:33 debug [Server.js]:  * Debugger is active!
+
+2019-03-14 17:51:33 debug [Server.js]:  * Debugger PIN: 217-057-426
+
+2019-03-14 17:51:33 debug [Server.js]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+2019-03-14 17:51:33 verbose [main.js]: loading...
+2019-03-14 17:51:33 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:51:33] "GET / HTTP/1.1" 200 -
+
+2019-03-14 17:51:33 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:51:33] "GET / HTTP/1.1" 200 -
+
+2019-03-14 17:51:39 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 17:51:39] "POST /shutdown HTTP/1.1" 505 -
+
+2019-03-14 17:51:39 verbose [main.js]: app is closing...
+2019-03-14 17:51:39 info [main.js]: Server is shutting down...
+2019-03-14 17:51:39 verbose [main.js]: app is quiting...
+2019-03-14 18:05:36 error [Server.js]: connect ECONNREFUSED 127.0.0.1:5000
+2019-03-14 18:05:36 verbose [main.js]: server is starting...
+2019-03-14 18:05:37 info [Server.js]:  * Serving Flask app "todo_mvc" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+
+2019-03-14 18:05:37 info [Server.js]:  * Debug mode: on
+
+2019-03-14 18:05:37 debug [Server.js]:  * Restarting with stat
+
+2019-03-14 18:05:39 debug [Server.js]:  * Debugger is active!
+
+2019-03-14 18:05:39 debug [Server.js]:  * Debugger PIN: 217-057-426
+
+2019-03-14 18:05:39 debug [Server.js]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+2019-03-14 18:05:39 verbose [main.js]: loading...
+2019-03-14 18:05:39 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 18:05:39] "GET / HTTP/1.1" 200 -
+
+2019-03-14 18:05:39 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 18:05:39] "GET / HTTP/1.1" 200 -
+
+2019-03-14 18:05:50 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 18:05:50] "POST /api/todos/ HTTP/1.1" 200 -
+
+2019-03-14 18:05:54 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 18:05:54] "POST /api/todos/ HTTP/1.1" 200 -
+
+2019-03-14 18:05:56 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 18:05:56] "PUT /api/todos/2 HTTP/1.1" 200 -
+
+2019-03-14 18:05:56 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 18:05:56] "PUT /api/todos/1 HTTP/1.1" 200 -
+
+2019-03-14 18:05:57 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 18:05:57] "PUT /api/todos/1 HTTP/1.1" 200 -
+
+2019-03-14 18:05:58 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 18:05:58] "PUT /api/todos/2 HTTP/1.1" 200 -
+
+2019-03-14 18:05:59 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 18:05:59] "PUT /api/todos/2 HTTP/1.1" 200 -
+
+2019-03-14 18:06:16 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 18:06:16] "DELETE /api/todos/2 HTTP/1.1" 200 -
+
+2019-03-14 18:06:21 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 18:06:21] "PUT /api/todos/1 HTTP/1.1" 200 -
+
+2019-03-14 18:06:23 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 18:06:23] "DELETE /api/todos/1 HTTP/1.1" 200 -
+
+2019-03-14 18:06:46 debug [Server.js]: 127.0.0.1 - - [14/Mar/2019 18:06:46] "POST /shutdown HTTP/1.1" 505 -
+
+2019-03-14 18:06:46 verbose [main.js]: app is closing...
+2019-03-14 18:06:46 info [main.js]: Server is shutting down...
+2019-03-14 18:06:46 verbose [main.js]: app is quiting...
+2019-03-15 12:32:48 error [Server.js]: connect ECONNREFUSED 127.0.0.1:5000
+2019-03-15 12:32:48 verbose [main.js]: server is starting...
+2019-03-15 12:32:49 info [Server.js]:  * Serving Flask app "todo_mvc" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+
+2019-03-15 12:32:49 info [Server.js]:  * Debug mode: on
+
+2019-03-15 12:32:50 debug [Server.js]:  * Restarting with stat
+
+2019-03-15 12:32:52 debug [Server.js]:  * Debugger is active!
+
+2019-03-15 12:32:52 debug [Server.js]:  * Debugger PIN: 217-057-426
+
+2019-03-15 12:32:52 debug [Server.js]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+2019-03-15 12:32:52 verbose [main.js]: loading...
+2019-03-15 12:32:52 debug [Server.js]: 127.0.0.1 - - [15/Mar/2019 12:32:52] "GET / HTTP/1.1" 200 -
+
+2019-03-15 12:32:53 debug [Server.js]: 127.0.0.1 - - [15/Mar/2019 12:32:53] "GET / HTTP/1.1" 200 -
+
+2019-03-15 12:34:47 debug [Server.js]: 127.0.0.1 - - [15/Mar/2019 12:34:47] "POST /api/todos/ HTTP/1.1" 200 -
+
+2019-03-15 12:34:52 debug [Server.js]: 127.0.0.1 - - [15/Mar/2019 12:34:52] "POST /api/todos/ HTTP/1.1" 200 -
+
+2019-03-15 12:34:57 debug [Server.js]: 127.0.0.1 - - [15/Mar/2019 12:34:57] "PUT /api/todos/1 HTTP/1.1" 200 -
+
+2019-03-15 12:34:57 debug [Server.js]: 127.0.0.1 - - [15/Mar/2019 12:34:57] "PUT /api/todos/2 HTTP/1.1" 200 -
+
+2019-03-15 12:35:06 debug [Server.js]: 127.0.0.1 - - [15/Mar/2019 12:35:06] "PUT /api/todos/1 HTTP/1.1" 200 -
+
+2019-03-15 12:35:06 debug [Server.js]: 127.0.0.1 - - [15/Mar/2019 12:35:06] "PUT /api/todos/2 HTTP/1.1" 200 -
+
+2019-03-15 12:35:16 debug [Server.js]: 127.0.0.1 - - [15/Mar/2019 12:35:16] "PUT /api/todos/1 HTTP/1.1" 200 -
+
+2019-03-15 12:35:16 debug [Server.js]: 127.0.0.1 - - [15/Mar/2019 12:35:16] "PUT /api/todos/2 HTTP/1.1" 200 -
+
+2019-03-15 12:35:21 debug [Server.js]: 127.0.0.1 - - [15/Mar/2019 12:35:21] "DELETE /api/todos/1 HTTP/1.1" 200 -
+
+2019-03-15 12:35:21 debug [Server.js]: 127.0.0.1 - - [15/Mar/2019 12:35:21] "DELETE /api/todos/2 HTTP/1.1" 200 -
+
+2019-03-15 12:35:33 debug [Server.js]: 127.0.0.1 - - [15/Mar/2019 12:35:33] "POST /shutdown HTTP/1.1" 505 -
+
+2019-03-15 12:35:33 verbose [main.js]: app is closing...
+2019-03-15 12:35:33 info [main.js]: Server is shutting down...
+2019-03-15 12:35:33 verbose [main.js]: app is quiting...
